@@ -1022,8 +1022,11 @@ p { font-size: var(--fs-base); }
 
 .consent-text {
   font-size: var(--fs-sm);
-  color: var(--text-muted);
-  line-height: 1.6;
+  color: var(--text);
+  line-height: 1.2;
+  text-transform:initial;
+  font-weight: 400;
+
 }
 
 .consent-link {
