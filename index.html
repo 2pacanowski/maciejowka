@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Willa Maciejówka | Luxury Mountain Retreat in Zakopane</title>
-  <meta name="description" content="Book Willa Maciejówka directly and save 10–20%. A historic 1901 Góral-style villa listed on Poland's National Register of Monuments, steps from Krupówki in central Zakopane. Ideal for families and groups. Dogs welcome." />
+  <title data-i18n-html="meta.title">Willa Maciejówka | Historic Mountain Villa in Central Zakopane</title>
+  <meta name="description" data-i18n="meta.desc" content="Book Willa Maciejówka directly and save 10–20%. A historic 1901 Góral villa, National Register of Monuments, steps from Krupówki. Ideal for families and groups. Dogs welcome." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <script src="https://client58297.idobooking.com/widget/script/loadScriptsForOwnPage?1778927546"></script>
 </head>
 <body>
 
@@ -22,22 +23,46 @@
         <span>Willa Maciejówka</span>
       </a>
       <ul class="nav-links">
-        <li><a href="#about">Villa</a></li>
-        <li><a href="#amenities">Amenities</a></li>
-        <li><a href="#location">Location</a></li>
-        <li><a href="#reviews">Reviews</a></li>
-        <li><a href="#booking" class="nav-cta">Book Direct</a></li>
+        <li><a href="#about" data-i18n="nav.villa">Villa</a></li>
+        <li><a href="#amenities" data-i18n="nav.amenities">Amenities</a></li>
+        <li><a href="#location" data-i18n="nav.location">Location</a></li>
+        <li><a href="#activities" data-i18n="nav.activities">Activities</a></li>
+        <li><a href="#reviews" data-i18n="nav.reviews">Reviews</a></li>
+        <li>
+          <a href="#"
+             class="nav-cta i_do_sell_booking_widget_start"
+             onclick="generateWidgetIdoSellBooking(this)"
+             language="0"
+             data-i18n="nav.book">Book Direct</a>
+        </li>
+        <li>
+          <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+            <span class="lang-en">EN</span>
+            <span class="lang-sep">|</span>
+            <span class="lang-pl">PL</span>
+          </button>
+        </li>
       </ul>
-      <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-right-mobile">
+        <button class="lang-toggle lang-toggle--mobile" id="langToggleMobile" aria-label="Switch language">
+          <span class="lang-en">EN</span><span class="lang-sep">|</span><span class="lang-pl">PL</span>
+        </button>
+        <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
     <div class="nav-mobile" id="navMobile">
-      <a href="#about" class="mobile-link">Villa</a>
-      <a href="#amenities" class="mobile-link">Amenities</a>
-      <a href="#location" class="mobile-link">Location</a>
-      <a href="#reviews" class="mobile-link">Reviews</a>
-      <a href="#booking" class="mobile-link mobile-cta">Book Direct</a>
+      <a href="#about" class="mobile-link" data-i18n="nav.villa">Villa</a>
+      <a href="#amenities" class="mobile-link" data-i18n="nav.amenities">Amenities</a>
+      <a href="#location" class="mobile-link" data-i18n="nav.location">Location</a>
+      <a href="#activities" class="mobile-link" data-i18n="nav.activities">Activities</a>
+      <a href="#reviews" class="mobile-link" data-i18n="nav.reviews">Reviews</a>
+      <a href="#"
+         class="mobile-link mobile-cta i_do_sell_booking_widget_start"
+         onclick="generateWidgetIdoSellBooking(this)"
+         language="0"
+         data-i18n="nav.book">Book Direct</a>
     </div>
   </nav>
 
@@ -51,28 +76,32 @@
     </div>
     <div class="folk-band-top"></div>
     <div class="hero-content">
-      <p class="hero-eyebrow">ul. Sienkiewicza 18 · Zakopane · Tatra Mountains</p>
+      <p class="hero-eyebrow" data-i18n="hero.eyebrow">ul. Sienkiewicza 18 · Zakopane · Tatra Mountains</p>
       <h1 class="hero-title">Willa<br/><em>Maciejówka</em></h1>
-      <p class="hero-subtitle">A century-old Góral landmark in the heart of Zakopane — steps from Krupówki, in a peaceful residential street. Perfect for families and groups of friends. Dogs welcome.</p>
+      <p class="hero-subtitle" data-i18n="hero.subtitle">A century-old Góral landmark in the heart of Zakopane — steps from Krupówki, in a peaceful residential street. Perfect for families and groups of friends. Dogs welcome.</p>
       <div class="hero-badges">
         <div class="badge">
           <span class="badge-star">★★★★★</span>
-          <span>4.97 · 86 reviews</span>
+          <span data-i18n="hero.reviews">5/5 Airbnb · 10/10 Booking.com</span>
         </div>
         <div class="badge-divider"></div>
         <div class="badge">
-          <span>Sleeps 9</span>
+          <span data-i18n="hero.sleeps">Sleeps 9</span>
         </div>
         <div class="badge-divider"></div>
         <div class="badge">
-          <span>Entire villa</span>
+          <span data-i18n="hero.entire">Entire villa</span>
         </div>
       </div>
       <div class="hero-actions">
-        <a href="#booking" class="btn btn-primary">Book Direct — No Fees</a>
-        <a href="#about" class="btn btn-ghost">Explore the Villa</a>
+        <a href="#"
+           class="btn btn-primary i_do_sell_booking_widget_start"
+           onclick="generateWidgetIdoSellBooking(this)"
+           language="0"
+           data-i18n="hero.bookBtn">Book Direct — No Fees</a>
+        <a href="#about" class="btn btn-ghost" data-i18n="hero.exploreBtn">Explore the Villa</a>
       </div>
-      <p class="hero-saving">Save 10%–20% vs. Airbnb or Booking.com</p>
+      <p class="hero-saving" data-i18n="hero.saving">Save 10%–20% vs. Airbnb or Booking.com</p>
     </div>
     <div class="hero-scroll">
       <a href="#usp" aria-label="Scroll down">
@@ -92,29 +121,29 @@
           <div class="usp-icon">
             <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 4L44 20V44H4V20L24 4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><rect x="16" y="28" width="16" height="16" stroke="currentColor" stroke-width="2"/><path d="M24 28V20" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="18" r="3" stroke="currentColor" stroke-width="2"/></svg>
           </div>
-          <h3>A Listed Historic Monument</h3>
-          <p>Built in 1901 and listed on Poland's National Register of Monuments, Maciejówka is a rare, living example of authentic Zakopane-style architecture — hand-carved larch, painted gables, and over 120 years of Góral craftsmanship.</p>
+          <h3 data-i18n="usp1.title">A Listed Historic Monument</h3>
+          <p data-i18n="usp1.desc">Built in 1901 and listed on Poland's National Register of Monuments, Maciejówka is a rare, living example of authentic Zakopane-style architecture — hand-carved larch, painted gables, and over 120 years of Góral craftsmanship.</p>
         </div>
         <div class="usp-card reveal">
           <div class="usp-icon">
             <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="20" r="8" stroke="currentColor" stroke-width="2"/><path d="M24 44C24 44 8 32 8 20C8 11.163 15.163 4 24 4C32.837 4 40 11.163 40 20C40 32 24 44 24 44Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
           </div>
-          <h3>Prime Central Location</h3>
-          <p>Równień Krupowa meadow and the Krupówki promenade are a short stroll away, yet Sienkiewicza street stays peacefully quiet — the best of both worlds.</p>
+          <h3 data-i18n="usp2.title">Prime Central Location</h3>
+          <p data-i18n="usp2.desc">Równień Krupowa meadow and the Krupówki promenade are a short stroll away, yet Sienkiewicza street stays peacefully quiet — the best of both worlds.</p>
         </div>
         <div class="usp-card reveal">
           <div class="usp-icon">
             <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="20" width="36" height="24" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 20V14C16 9.582 19.582 6 24 6C28.418 6 32 9.582 32 14V20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="32" r="4" stroke="currentColor" stroke-width="2"/></svg>
           </div>
-          <h3>Exclusively Yours</h3>
-          <p>No shared spaces, no strangers. The entire villa — all four bedrooms, sunny conservatory, and garden — is reserved for your family or group alone.</p>
+          <h3 data-i18n="usp3.title">Exclusively Yours</h3>
+          <p data-i18n="usp3.desc">No shared spaces, no strangers. The entire villa — all four bedrooms, sunny conservatory, and garden — is reserved for your family or group alone.</p>
         </div>
         <div class="usp-card reveal">
           <div class="usp-icon">
             <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 4C24 4 8 14 8 26C8 34.837 15.163 42 24 42C32.837 42 40 34.837 40 26C40 14 24 4 24 4Z" stroke="currentColor" stroke-width="2"/><path d="M24 42V26M24 26L16 18M24 26L32 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
-          <h3>Direct Booking Savings</h3>
-          <p>Book without a middleman. Save 10–20% compared to Airbnb or Booking.com prices, with flexible cancellation and personal support from the owner.</p>
+          <h3 data-i18n="usp4.title">Direct Booking Savings</h3>
+          <p data-i18n="usp4.desc">Book without a middleman. Save 10–20% compared to Airbnb or Booking.com prices, with flexible cancellation and personal support from the owner.</p>
         </div>
       </div>
     </div>
@@ -127,19 +156,31 @@
     <div class="folk-divider"></div>
     <div class="container">
       <div class="section-header reveal">
-        <p class="eyebrow">The Villa</p>
-        <h2>Where Mountain Tradition<br/><em>Meets Modern Comfort</em></h2>
+        <p class="eyebrow" data-i18n="about.eyebrow">The Villa</p>
+        <h2 data-i18n-html="about.title">Where Mountain Tradition<br/><em>Meets Modern Comfort</em></h2>
       </div>
       <div class="about-grid">
         <div class="about-text reveal">
-          <p class="lead">Built in 1901 and listed on Poland's National Register of Monuments, Willa Maciejówka stands on ul. Sienkiewicza — one of Zakopane's most sought-after central streets. The original larch-log structure, hand-notched by local Góral craftsmen, has been carefully restored and fitted with every modern comfort while preserving its historic character.</p>
-          <p>The ground floor opens into a double-height living room with traditional folk-art details. A fully-equipped large kitchen leads into a sunny conservatory with a generous dining table — the heart of every family gathering. Outside, a private garden offers a quiet retreat just moments from Zakopane's vibrant centre.</p>
-          <p>Upstairs, four bedrooms — each with quality linens and thoughtful details like reading nooks and folk-art headboards — sleep up to nine guests in comfort. Two en-suite bathrooms and a shared family bathroom ensure nobody has to queue. Ideal for families with children and groups of friends — dogs are warmly welcome.</p>
+          <p class="lead" data-i18n="about.lead">Built in 1901 and listed on Poland's National Register of Monuments, Willa Maciejówka stands on ul. Sienkiewicza — one of Zakopane's most sought-after central streets. The original larch-log structure, hand-notched by local Góral craftsmen, has been carefully restored and fitted with every modern comfort while preserving its historic character.</p>
+          <p data-i18n="about.body1">The ground floor opens into a double-height living room with traditional folk-art details. A fully-equipped large kitchen leads into a sunny conservatory with a generous dining table — the heart of every family gathering. Outside, a private garden offers a quiet retreat just moments from Zakopane's vibrant centre.</p>
+          <p data-i18n="about.body2">Upstairs, four bedrooms — each with large double beds, quality linens and thoughtful folk-art details — sleep up to nine guests in comfort. Three full bathrooms ensure nobody has to queue. Ideal for families with children and groups of friends — dogs are warmly welcome.</p>
           <ul class="about-stats">
-            <li><span class="stat-num">280</span><span class="stat-label">m² living space</span></li>
-            <li><span class="stat-num">4</span><span class="stat-label">bedrooms</span></li>
-            <li><span class="stat-num">9</span><span class="stat-label">guests max</span></li>
-            <li><span class="stat-num">3</span><span class="stat-label">bathrooms</span></li>
+            <li>
+              <span class="stat-num">280</span>
+              <span class="stat-label" data-i18n="about.stat1">m² living space</span>
+            </li>
+            <li>
+              <span class="stat-num">4</span>
+              <span class="stat-label" data-i18n="about.stat2">bedrooms</span>
+            </li>
+            <li>
+              <span class="stat-num">9</span>
+              <span class="stat-label" data-i18n="about.stat3">guests max</span>
+            </li>
+            <li>
+              <span class="stat-num">3</span>
+              <span class="stat-label" data-i18n="about.stat4">bathrooms</span>
+            </li>
           </ul>
         </div>
         <div class="about-photos reveal">
@@ -151,13 +192,13 @@
               <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=600&q=80" alt="Villa bedroom with mountain view" loading="lazy"/>
             </div>
             <div class="photo-sm">
-              <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" alt="Outdoor terrace and Tatra view" loading="lazy"/>
+              <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" alt="Sunny conservatory dining area" loading="lazy"/>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="folk-divider flip"></div>
+    <div class="folk-divider folk-divider--flip"></div>
   </section>
 
   <!-- ═══════════════════════════════════════════
@@ -166,33 +207,33 @@
   <section id="gallery" class="gallery-section">
     <div class="container">
       <div class="section-header reveal">
-        <p class="eyebrow">Gallery</p>
-        <h2>Life Inside<br/><em>Maciejówka</em></h2>
+        <p class="eyebrow" data-i18n="gallery.eyebrow">Gallery</p>
+        <h2 data-i18n-html="gallery.title">Life Inside<br/><em>Maciejówka</em></h2>
       </div>
       <div class="gallery-grid reveal">
         <div class="gallery-item gallery-item--wide">
           <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=1200&q=80" alt="Villa exterior in winter" loading="lazy"/>
-          <div class="gallery-caption">Mountain facade in fresh snow</div>
+          <div class="gallery-caption" data-i18n="gallery.cap1">Mountain facade in fresh snow</div>
         </div>
         <div class="gallery-item">
           <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=600&q=80" alt="Sunny conservatory with dining table" loading="lazy"/>
-          <div class="gallery-caption">Sunny conservatory & dining</div>
+          <div class="gallery-caption" data-i18n="gallery.cap2">Sunny conservatory & dining</div>
         </div>
         <div class="gallery-item">
           <img src="https://images.unsplash.com/photo-1568495248636-6432b97bd949?auto=format&fit=crop&w=600&q=80" alt="Traditional Góral living area" loading="lazy"/>
-          <div class="gallery-caption">Traditional Góral living room</div>
+          <div class="gallery-caption" data-i18n="gallery.cap3">Traditional Góral living room</div>
         </div>
         <div class="gallery-item">
           <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=600&q=80" alt="Fully equipped kitchen" loading="lazy"/>
-          <div class="gallery-caption">Chef's kitchen</div>
+          <div class="gallery-caption" data-i18n="gallery.cap4">Chef's kitchen</div>
         </div>
         <div class="gallery-item">
           <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=600&q=80" alt="Master bedroom" loading="lazy"/>
-          <div class="gallery-caption">Master suite</div>
+          <div class="gallery-caption" data-i18n="gallery.cap5">Master suite</div>
         </div>
         <div class="gallery-item gallery-item--wide">
           <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1200&q=80" alt="Tatra mountain panorama" loading="lazy"/>
-          <div class="gallery-caption">The view from your terrace</div>
+          <div class="gallery-caption" data-i18n="gallery.cap6">The view from your terrace</div>
         </div>
       </div>
     </div>
@@ -205,41 +246,69 @@
     <div class="folk-divider"></div>
     <div class="container">
       <div class="section-header reveal">
-        <p class="eyebrow">Included in Every Stay</p>
-        <h2>Everything You<br/><em>Could Need</em></h2>
+        <p class="eyebrow" data-i18n="amenities.eyebrow">Included in Every Stay</p>
+        <h2 data-i18n-html="amenities.title">Everything You<br/><em>Could Need</em></h2>
       </div>
       <div class="amenities-grid">
         <div class="amenity reveal">
           <div class="amenity-icon">🍳</div>
-          <span>Fully Equipped Large Kitchen</span>
+          <span data-i18n="amenities.kitchen">Fully Equipped Large Kitchen</span>
         </div>
         <div class="amenity reveal">
           <div class="amenity-icon">☀️</div>
-          <span>Sunny Conservatory & Dining Table</span>
-        </div>
-        <div class="amenity reveal">
-          <div class="amenity-icon">📺</div>
-          <span>Smart TV</span>
-        </div>
-        <div class="amenity reveal">
-          <div class="amenity-icon">🌐</div>
-          <span>High-Speed WiFi</span>
-        </div>
-        <div class="amenity reveal">
-          <div class="amenity-icon">🚗</div>
-          <span>Private Parking (up to 3 cars)</span>
+          <span data-i18n="amenities.conservatory">Sunny Conservatory & Dining Table</span>
         </div>
         <div class="amenity reveal">
           <div class="amenity-icon">🛏️</div>
-          <span>Luxury Linen & Towels</span>
+          <span data-i18n="amenities.bedrooms">4 Spacious Bedrooms with Double Beds</span>
+        </div>
+        <div class="amenity reveal">
+          <div class="amenity-icon">🚿</div>
+          <span data-i18n="amenities.bathrooms">3 Full Bathrooms</span>
+        </div>
+        <div class="amenity reveal">
+          <div class="amenity-icon">☕</div>
+          <span data-i18n="amenities.coffee">Coffee Machine with Capsules</span>
+        </div>
+        <div class="amenity reveal">
+          <div class="amenity-icon">🫧</div>
+          <span data-i18n="amenities.dishwasher">Dishwasher & Washing Machine</span>
+        </div>
+        <div class="amenity reveal">
+          <div class="amenity-icon">📺</div>
+          <span data-i18n="amenities.tv">Smart TV</span>
+        </div>
+        <div class="amenity reveal">
+          <div class="amenity-icon">🌐</div>
+          <span data-i18n="amenities.wifi">High-Speed WiFi</span>
+        </div>
+        <div class="amenity reveal">
+          <div class="amenity-icon">🚗</div>
+          <span data-i18n="amenities.parking">Private Parking (up to 3 cars)</span>
+        </div>
+        <div class="amenity reveal">
+          <div class="amenity-icon">🛏️</div>
+          <span data-i18n="amenities.linen">Luxury Linen & Towels</span>
+        </div>
+        <div class="amenity reveal">
+          <div class="amenity-icon">🧴</div>
+          <span data-i18n="amenities.cosmetics">Cosmetics — Soap, Shampoo, Conditioner & Vanity Kits</span>
+        </div>
+        <div class="amenity reveal">
+          <div class="amenity-icon">💇</div>
+          <span data-i18n="amenities.hairdryer">Hairdryers in Every Bathroom</span>
+        </div>
+        <div class="amenity reveal">
+          <div class="amenity-icon">💧</div>
+          <span data-i18n="amenities.water">Complimentary Water in Every Bedroom</span>
         </div>
         <div class="amenity reveal">
           <div class="amenity-icon">🐾</div>
-          <span>Pets Welcome</span>
+          <span data-i18n="amenities.pets">Pets Welcome</span>
         </div>
       </div>
     </div>
-    <div class="folk-divider flip"></div>
+    <div class="folk-divider folk-divider--flip"></div>
   </section>
 
   <!-- ═══════════════════════════════════════════
@@ -248,71 +317,55 @@
   <section id="location" class="location-section">
     <div class="container">
       <div class="section-header reveal">
-        <p class="eyebrow">Location</p>
-        <h2>At the Heart of<br/><em>Zakopane</em></h2>
+        <p class="eyebrow" data-i18n="location.eyebrow">Location</p>
+        <h2 data-i18n-html="location.title">At the Heart of<br/><em>Zakopane</em></h2>
       </div>
       <div class="location-grid">
         <div class="location-info reveal">
-          <p class="lead">Willa Maciejówka sits on ul. Sienkiewicza 18 — a peaceful, tree-lined residential street right in the centre of Zakopane. Równień Krupowa and the famous Krupówki promenade are just a short walk away, while the neighbourhood itself stays wonderfully quiet.</p>
+          <p class="lead" data-i18n="location.lead">Willa Maciejówka sits on ul. Sienkiewicza 18 — a peaceful, tree-lined residential street right in the centre of Zakopane. Równień Krupowa and the famous Krupówki promenade are just a short walk away, while the neighbourhood itself stays wonderfully quiet.</p>
           <ul class="distance-list">
             <li>
               <span class="dist-icon">🚶</span>
-              <span class="dist-place">Równień Krupowa meadow</span>
-              <span class="dist-time">3 min walk</span>
+              <span class="dist-place" data-i18n="loc.d1">Równień Krupowa meadow</span>
+              <span class="dist-time" data-i18n="loc.t1">3 min walk</span>
             </li>
             <li>
               <span class="dist-icon">🚶</span>
-              <span class="dist-place">Krupówki Promenade</span>
-              <span class="dist-time">5 min walk</span>
+              <span class="dist-place" data-i18n="loc.d2">Krupówki Promenade</span>
+              <span class="dist-time" data-i18n="loc.t2">5 min walk</span>
             </li>
             <li>
               <span class="dist-icon">🚌</span>
-              <span class="dist-place">Kasprowy Wierch Cable Car</span>
-              <span class="dist-time">15 min by car</span>
+              <span class="dist-place" data-i18n="loc.d3">Kasprowy Wierch Cable Car</span>
+              <span class="dist-time" data-i18n="loc.t3">15 min by car</span>
             </li>
             <li>
               <span class="dist-icon">⛷️</span>
-              <span class="dist-place">Nosal Ski Slopes</span>
-              <span class="dist-time">10 min drive</span>
+              <span class="dist-place" data-i18n="loc.d4">Nosal Ski Slopes</span>
+              <span class="dist-time" data-i18n="loc.t4">10 min drive</span>
             </li>
             <li>
               <span class="dist-icon">🌊</span>
-              <span class="dist-place">Termy Zakopane Thermal Baths</span>
-              <span class="dist-time">8 min drive</span>
+              <span class="dist-place" data-i18n="loc.d5">Termy Zakopane Thermal Baths</span>
+              <span class="dist-time" data-i18n="loc.t5">8 min drive</span>
             </li>
             <li>
               <span class="dist-icon">🥾</span>
-              <span class="dist-place">Morskie Oko Trailhead</span>
-              <span class="dist-time">25 min drive</span>
+              <span class="dist-place" data-i18n="loc.d6">Morskie Oko Trailhead</span>
+              <span class="dist-time" data-i18n="loc.t6">25 min drive</span>
             </li>
             <li>
               <span class="dist-icon">✈️</span>
-              <span class="dist-place">Kraków Airport (KRK)</span>
-              <span class="dist-time">1 h 45 min drive</span>
+              <span class="dist-place" data-i18n="loc.d7">Kraków Airport (KRK)</span>
+              <span class="dist-time" data-i18n="loc.t7">1 h 45 min drive</span>
             </li>
           </ul>
-          <div class="seasons-box">
-            <div class="season">
-              <span class="season-icon">❄️</span>
-              <div>
-                <strong>Winter (Dec–Mar)</strong>
-                <p>Skiing, snowshoeing, sleigh rides, and warming oscypek at one of the restaurants just steps from the door.</p>
-              </div>
-            </div>
-            <div class="season">
-              <span class="season-icon">🌿</span>
-              <div>
-                <strong>Summer (Jun–Sep)</strong>
-                <p>Hiking, mountain biking, wild swimming and breathtaking alpine meadows — all starting from your front door.</p>
-              </div>
-            </div>
-          </div>
         </div>
         <div class="location-map reveal">
           <iframe
             src="https://maps.google.com/maps?q=Sienkiewicza+18,+Zakopane,+Poland&output=embed&hl=en&z=16"
             width="100%"
-            height="420"
+            height="460"
             style="border:0;"
             allowfullscreen=""
             loading="lazy"
@@ -325,25 +378,69 @@
   </section>
 
   <!-- ═══════════════════════════════════════════
-       GUEST REVIEWS
+       ACTIVITIES — SUMMER & WINTER
   ═══════════════════════════════════════════ -->
-  <section id="reviews" class="reviews-section">
+  <section id="activities" class="activities-section">
     <div class="folk-divider"></div>
     <div class="container">
       <div class="section-header reveal">
-        <p class="eyebrow">Guest Voices</p>
-        <h2>What Our Guests<br/><em>Remember Most</em></h2>
-        <div class="review-summary reveal">
-          <div class="summary-score">4.97</div>
-          <div class="summary-detail">
-            <div class="stars-row">★★★★★</div>
-            <p>Based on 86 verified reviews</p>
-          </div>
+        <p class="eyebrow" data-i18n="activities.eyebrow">All Year Round</p>
+        <h2 data-i18n-html="activities.title">Things To Do<br/><em>in Zakopane</em></h2>
+        <p class="section-intro" data-i18n="activities.intro">From powder slopes to alpine meadows — Zakopane's calendar is full year-round.</p>
+      </div>
+      <div class="activities-tabs reveal">
+        <button class="tab-btn tab-btn--active" data-tab="winter" id="tabWinter">
+          <span>❄️</span> <span data-i18n="activities.winterBtn">Winter</span>
+        </button>
+        <button class="tab-btn" data-tab="summer" id="tabSummer">
+          <span>🌿</span> <span data-i18n="activities.summerBtn">Summer</span>
+        </button>
+      </div>
+      <div class="activities-grid" id="activitiesGrid">
+        <!-- rendered by JS -->
+      </div>
+    </div>
+    <div class="folk-divider folk-divider--flip"></div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       GUEST REVIEWS
+  ═══════════════════════════════════════════ -->
+  <section id="reviews" class="reviews-section">
+    <div class="folk-divider folk-divider--light"></div>
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="eyebrow" data-i18n="reviews.eyebrow">Guest Voices</p>
+        <h2 data-i18n-html="reviews.title">What Our Guests<br/><em>Remember Most</em></h2>
+      </div>
+
+      <div class="platform-ratings reveal">
+        <div class="platform-card">
+          <div class="platform-name">Airbnb</div>
+          <div class="platform-score">5.0 / 5</div>
+          <div class="platform-stars">★★★★★</div>
+          <div class="platform-meta" data-i18n="reviews.airbnbMeta">8 reviews</div>
+          <div class="guest-fav-badge" data-i18n="reviews.guestFav">★ Guest Favourite</div>
+        </div>
+        <div class="platform-divider"></div>
+        <div class="platform-card">
+          <div class="platform-name">Booking.com</div>
+          <div class="platform-score">10 / 10</div>
+          <div class="platform-meta" data-i18n="reviews.bookingMeta">3 reviews</div>
         </div>
       </div>
+
+      <div class="top10-claim reveal">
+        <span class="top10-icon">🏆</span>
+        <p data-i18n="reviews.top10">Willa Maciejówka is in the top 10% of highest rated properties in Zakopane according to Airbnb.</p>
+      </div>
+
       <div class="reviews-grid">
         <div class="review-card reveal">
-          <div class="review-stars">★★★★★</div>
+          <div class="review-header">
+            <div class="review-stars">★★★★★</div>
+            <span class="source-badge source-direct" data-i18n="reviews.sourceDirect">Direct</span>
+          </div>
           <blockquote>"We arrived on a snowy Friday evening, wine was chilling and the conservatory table was set — we felt at home within minutes. Three days felt like two weeks of rest. We'll be back every winter."</blockquote>
           <div class="reviewer">
             <div class="reviewer-avatar">AM</div>
@@ -354,7 +451,10 @@
           </div>
         </div>
         <div class="review-card reveal">
-          <div class="review-stars">★★★★★</div>
+          <div class="review-header">
+            <div class="review-stars">★★★★★</div>
+            <span class="source-badge source-airbnb">Airbnb</span>
+          </div>
           <blockquote>"Absolutely stunning. After a full day of skiing on Kasprowy we came back to this incredible building and couldn't believe our luck. The woodwork and details feel like a museum but it's completely comfortable to live in."</blockquote>
           <div class="reviewer">
             <div class="reviewer-avatar">JS</div>
@@ -365,7 +465,10 @@
           </div>
         </div>
         <div class="review-card reveal">
-          <div class="review-stars">★★★★★</div>
+          <div class="review-header">
+            <div class="review-stars">★★★★★</div>
+            <span class="source-badge source-booking">Booking.com</span>
+          </div>
           <blockquote>"We came as a family of nine for New Year and it was the best decision we've ever made. Kids loved exploring Krupówki on foot, adults loved the conservatory breakfasts and evening walks. The host was incredibly responsive too."</blockquote>
           <div class="reviewer">
             <div class="reviewer-avatar">MK</div>
@@ -376,7 +479,10 @@
           </div>
         </div>
         <div class="review-card reveal">
-          <div class="review-stars">★★★★★</div>
+          <div class="review-header">
+            <div class="review-stars">★★★★★</div>
+            <span class="source-badge source-airbnb">Airbnb</span>
+          </div>
           <blockquote>"We've rented places in the Alps and Dolomites, but Maciejówka has a soul those places don't. The craftsmanship of the building, the kindness of the owner, and those mountain mornings — impossible to beat at this price point."</blockquote>
           <div class="reviewer">
             <div class="reviewer-avatar">PL</div>
@@ -387,7 +493,10 @@
           </div>
         </div>
         <div class="review-card reveal">
-          <div class="review-stars">★★★★★</div>
+          <div class="review-header">
+            <div class="review-stars">★★★★★</div>
+            <span class="source-badge source-direct" data-i18n="reviews.sourceDirect">Direct</span>
+          </div>
           <blockquote>"Booked directly after finding this website and saved nearly 400 PLN vs. what I saw on Airbnb. The booking process was simple, check-in was smooth, and the villa exceeded every expectation. Highly recommend booking direct."</blockquote>
           <div class="reviewer">
             <div class="reviewer-avatar">TO</div>
@@ -398,7 +507,10 @@
           </div>
         </div>
         <div class="review-card reveal">
-          <div class="review-stars">★★★★★</div>
+          <div class="review-header">
+            <div class="review-stars">★★★★★</div>
+            <span class="source-badge source-booking">Booking.com</span>
+          </div>
           <blockquote>"The hike to Morskie Oko, the sunny conservatory breakfasts, the evening strolls on Krupówki — it was one of those trips where everything goes right. Thank you for creating such a special place."</blockquote>
           <div class="reviewer">
             <div class="reviewer-avatar">KW</div>
@@ -410,7 +522,7 @@
         </div>
       </div>
     </div>
-    <div class="folk-divider flip"></div>
+    <div class="folk-divider folk-divider--flip folk-divider--light"></div>
   </section>
 
   <!-- ═══════════════════════════════════════════
@@ -420,159 +532,148 @@
     <div class="folk-divider"></div>
     <div class="container">
       <div class="section-header reveal">
-        <p class="eyebrow">FAQ</p>
-        <h2>Good Questions<br/><em>Deserve Honest Answers</em></h2>
+        <p class="eyebrow" data-i18n="faq.eyebrow">FAQ</p>
+        <h2 data-i18n-html="faq.title">Good Questions<br/><em>Deserve Honest Answers</em></h2>
       </div>
       <div class="faq-list">
         <div class="faq-item reveal">
           <button class="faq-q" aria-expanded="false">
-            <span>How do I book directly?</span>
+            <span data-i18n="faq.q1">How do I book directly?</span>
             <span class="faq-chevron">+</span>
           </button>
           <div class="faq-a">
-            <p>Fill in the booking form below with your dates and group size. We'll confirm availability and send a secure payment link within a few hours. No accounts required, no platform fees — just a direct conversation with us.</p>
+            <p data-i18n="faq.a1">Use the Book Direct button on this page to check availability and complete your booking in seconds via our secure reservation system — no middlemen, no platform fees, just us.</p>
           </div>
         </div>
         <div class="faq-item reveal">
           <button class="faq-q" aria-expanded="false">
-            <span>What is your cancellation policy?</span>
+            <span data-i18n="faq.q2">What is your cancellation policy?</span>
             <span class="faq-chevron">+</span>
           </button>
           <div class="faq-a">
-            <p>Cancellations more than 30 days before check-in receive a full refund. 14–30 days: 50% refund. Under 14 days: no refund, but we'll do our best to re-let the dates and refund the recovered amount. We strongly recommend travel insurance.</p>
+            <p data-i18n="faq.a2">Cancellations more than 30 days before check-in receive a full refund. 14–30 days: 50% refund. Under 14 days: no refund, but we'll do our best to re-let the dates and refund the recovered amount. We strongly recommend travel insurance.</p>
           </div>
         </div>
         <div class="faq-item reveal">
           <button class="faq-q" aria-expanded="false">
-            <span>Is the villa suitable for young children?</span>
+            <span data-i18n="faq.q3">Is the villa suitable for young children?</span>
             <span class="faq-chevron">+</span>
           </button>
           <div class="faq-a">
-            <p>Absolutely. We have travel cots and highchairs available on request, and all stair-edges are safety-netted. The central location means families can walk to Krupówki, Równień Krupowa, and Zakopane's main attractions with ease. Many of our most enthusiastic repeat guests are families with young children.</p>
+            <p data-i18n="faq.a3">Absolutely. We have travel cots and highchairs available on request, and all stair-edges are safety-netted. The central location means families can walk to Krupówki, Równień Krupowa, and Zakopane's main attractions with ease. Many of our most enthusiastic repeat guests are families with young children.</p>
           </div>
         </div>
         <div class="faq-item reveal">
           <button class="faq-q" aria-expanded="false">
-            <span>Are pets welcome?</span>
+            <span data-i18n="faq.q4">Are pets welcome?</span>
             <span class="faq-chevron">+</span>
           </button>
           <div class="faq-a">
-            <p>Yes — up to two well-behaved dogs are welcome at no extra charge. The garden is fully fenced. We just ask that dogs aren't left unattended indoors and aren't allowed on furniture. Please mention your pets when booking.</p>
+            <p data-i18n="faq.a4">Yes — up to two well-behaved dogs are welcome at no extra charge. We just ask that dogs aren't left unattended indoors and aren't allowed on furniture. Please mention your pets when booking.</p>
           </div>
         </div>
         <div class="faq-item reveal">
           <button class="faq-q" aria-expanded="false">
-            <span>What are check-in and check-out times?</span>
+            <span data-i18n="faq.q5">What are check-in and check-out times?</span>
             <span class="faq-chevron">+</span>
           </button>
           <div class="faq-a">
-            <p>Check-in is from 15:00 and check-out by 11:00. Early check-in or late check-out can often be arranged subject to availability — just ask. We offer a contactless key-safe system so you're never tied to our schedule.</p>
+            <p data-i18n="faq.a5">Check-in is from 15:00 and check-out by 11:00. Early check-in or late check-out can often be arranged subject to availability — just ask. We offer a contactless key-safe system so you're never tied to our schedule.</p>
           </div>
         </div>
         <div class="faq-item reveal">
           <button class="faq-q" aria-expanded="false">
-            <span>Is there parking and how do we get there?</span>
+            <span data-i18n="faq.q6">Is there parking and how do we get there?</span>
             <span class="faq-chevron">+</span>
           </button>
           <div class="faq-a">
-            <p>Private gated parking for up to 3 cars is included. By car from Kraków (100 km via the S7 motorway, about 1 hr 45 min). Alternatively, PKP Intercity trains run to Zakopane daily from Warsaw (under 4 hours) and there are frequent coaches from Kraków. We're happy to arrange airport transfers — just ask.</p>
+            <p data-i18n="faq.a6">Private gated parking for up to 3 cars is included. By car from Kraków: 100 km via the S7 motorway, about 1 hr 45 min. Alternatively, PKP trains run to Zakopane from Warsaw (under 4 hours) and coaches run frequently from Kraków. We're happy to help arrange airport transfers — just ask.</p>
           </div>
         </div>
         <div class="faq-item reveal">
           <button class="faq-q" aria-expanded="false">
-            <span>Can we host an event or celebration?</span>
+            <span data-i18n="faq.q7">Can we host a celebration?</span>
             <span class="faq-chevron">+</span>
           </button>
           <div class="faq-a">
-            <p>Small private celebrations (birthdays, anniversaries, corporate retreats) for registered guests are welcome. We ask for prior notice and request that the number of guests on any given evening does not exceed 12. We're not able to host open-invitation parties or stag/hen dos, to ensure a peaceful environment for neighbours.</p>
+            <p data-i18n="faq.a7">Small private celebrations (birthdays, anniversaries, corporate retreats) for registered guests are welcome. We ask for prior notice and request that the number of guests does not exceed 12 on any given evening. We're not able to host open-invitation parties, to ensure a peaceful environment for neighbours.</p>
           </div>
         </div>
       </div>
     </div>
-    <div class="folk-divider flip"></div>
+    <div class="folk-divider folk-divider--flip"></div>
   </section>
 
   <!-- ═══════════════════════════════════════════
-       BOOKING / CONTACT
+       CONTACT
   ═══════════════════════════════════════════ -->
-  <section id="booking" class="booking-section">
-    <div class="booking-bg">
+  <section id="contact" class="contact-section">
+    <div class="contact-bg">
       <img src="https://images.unsplash.com/photo-1516912481808-3406841bd33c?auto=format&fit=crop&w=1920&q=80" alt="Tatra mountains at sunset" />
-      <div class="booking-overlay"></div>
+      <div class="contact-overlay"></div>
     </div>
     <div class="container">
-      <div class="booking-inner">
-        <div class="booking-headline reveal">
-          <p class="eyebrow eyebrow--light">Book Direct & Save</p>
-          <h2>Ready to Come<br/><em>to the Mountains?</em></h2>
-          <p>Send us your dates and we'll get back to you within 4 hours with availability and a no-obligation quote. Save 10–20% vs. Airbnb or Booking.com — no fees, no algorithms, just us.</p>
+      <div class="contact-inner">
+        <div class="contact-headline reveal">
+          <p class="eyebrow eyebrow--light" data-i18n="contact.eyebrow">Get in Touch</p>
+          <h2 data-i18n-html="contact.title">Questions?<br/><em>We're Here for You.</em></h2>
+          <p data-i18n="contact.body">Planning a visit or curious about availability? Have a question about the villa, the area, or anything else? Drop us a message and we'll reply within 4 hours.</p>
           <div class="contact-links">
-            <a href="https://wa.me/48123456789" class="contact-pill whatsapp" target="_blank" rel="noopener">
+            <a href="https://wa.me/48123456789" class="contact-pill contact-pill--whatsapp" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp Us
+              <span data-i18n="contact.whatsapp">WhatsApp Us</span>
             </a>
-            <a href="mailto:hello@maciejowka.pl" class="contact-pill email">
+            <a href="mailto:hello@maciejowka.pl" class="contact-pill contact-pill--email">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               hello@maciejowka.pl
             </a>
           </div>
+          <div class="contact-book-prompt">
+            <p data-i18n="contact.bookPrompt">Ready to book? Use our instant reservation system:</p>
+            <a href="#"
+               class="btn btn-primary i_do_sell_booking_widget_start"
+               onclick="generateWidgetIdoSellBooking(this)"
+               language="0"
+               data-i18n="contact.bookBtn">Check Availability & Book</a>
+          </div>
         </div>
-        <div class="booking-form-wrap reveal">
-          <form class="booking-form" id="bookingForm" novalidate>
-            <h3>Send a Booking Request</h3>
+        <div class="contact-form-wrap reveal">
+          <form class="contact-form" id="contactForm" novalidate>
+            <h3 data-i18n="contact.formTitle">Send Us a Message</h3>
             <div class="form-row">
               <div class="form-group">
-                <label for="firstName">First Name</label>
+                <label for="firstName" data-i18n="contact.firstName">First Name</label>
                 <input type="text" id="firstName" name="firstName" placeholder="Anna" required />
               </div>
               <div class="form-group">
-                <label for="lastName">Last Name</label>
+                <label for="lastName" data-i18n="contact.lastName">Last Name</label>
                 <input type="text" id="lastName" name="lastName" placeholder="Kowalska" required />
               </div>
             </div>
             <div class="form-group">
-              <label for="email">Email Address</label>
+              <label for="email" data-i18n="contact.email">Email Address</label>
               <input type="email" id="email" name="email" placeholder="anna@example.com" required />
             </div>
             <div class="form-group">
-              <label for="phone">Phone / WhatsApp</label>
+              <label for="phone" data-i18n="contact.phone">Phone / WhatsApp</label>
               <input type="tel" id="phone" name="phone" placeholder="+48 000 000 000" />
             </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="checkin">Check-in Date</label>
-                <input type="date" id="checkin" name="checkin" required />
-              </div>
-              <div class="form-group">
-                <label for="checkout">Check-out Date</label>
-                <input type="date" id="checkout" name="checkout" required />
-              </div>
-            </div>
             <div class="form-group">
-              <label for="guests">Number of Guests</label>
-              <select id="guests" name="guests" required>
-                <option value="">Select guests</option>
-                <option value="1-2">1–2 guests</option>
-                <option value="3-4">3–4 guests</option>
-                <option value="5-6">5–6 guests</option>
-                <option value="7-8">7–8 guests</option>
-                <option value="9">9 guests</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="message">Tell us about your stay</label>
-              <textarea id="message" name="message" rows="3" placeholder="Occasion, dietary requirements, early check-in request…"></textarea>
+              <label for="message" data-i18n="contact.message">Your Message</label>
+              <textarea id="message" name="message" rows="5" required
+                data-i18n-placeholder="contact.messagePlaceholder"
+                placeholder="Questions about the villa, dates you're considering, anything at all — we'd love to hear from you."></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-full">
-              <span class="btn-text">Send Booking Request</span>
-              <span class="btn-loading" hidden>Sending…</span>
+              <span class="btn-text" data-i18n="contact.send">Send Message</span>
+              <span class="btn-loading" hidden data-i18n="contact.sending">Sending…</span>
             </button>
-            <p class="form-note">We reply within 4 hours · No credit card required to enquire</p>
+            <p class="form-note" data-i18n="contact.note">We reply within 4 hours · Your details are never shared</p>
           </form>
           <div class="form-success" id="formSuccess" hidden>
             <div class="success-icon">✓</div>
-            <h3>Request Received!</h3>
-            <p>Thank you — we'll be in touch within 4 hours to confirm your dates and send a quote.</p>
+            <h3 data-i18n="contact.successTitle">Message Received!</h3>
+            <p data-i18n="contact.successBody">Thank you for getting in touch — we'll reply within 4 hours.</p>
           </div>
         </div>
       </div>
@@ -586,23 +687,23 @@
     <div class="container">
       <div class="trust-grid">
         <div class="trust-item">
-          <strong>Secure Payments</strong>
-          <p>Bank transfer or Stripe — fully protected</p>
+          <strong data-i18n="trust.t1">Secure Payments</strong>
+          <p data-i18n="trust.d1">Bank transfer or Stripe — fully protected</p>
         </div>
         <div class="trust-divider"></div>
         <div class="trust-item">
-          <strong>86 Verified Reviews</strong>
-          <p>4.97 average — from guests just like you</p>
+          <strong data-i18n="trust.t2">5★ on Airbnb · 10/10 on Booking.com</strong>
+          <p data-i18n="trust.d2">Top 10% of properties in Zakopane</p>
         </div>
         <div class="trust-divider"></div>
         <div class="trust-item">
-          <strong>Personal Host</strong>
-          <p>You speak directly with the owner — always</p>
+          <strong data-i18n="trust.t3">Personal Host</strong>
+          <p data-i18n="trust.d3">You speak directly with the owner — always</p>
         </div>
         <div class="trust-divider"></div>
         <div class="trust-item">
-          <strong>Instant Confirmation</strong>
-          <p>No waiting — availability confirmed same day</p>
+          <strong data-i18n="trust.t4">Instant Confirmation</strong>
+          <p data-i18n="trust.d4">No waiting — availability confirmed same day</p>
         </div>
       </div>
     </div>
@@ -617,7 +718,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <p class="footer-logo">❖ Willa Maciejówka</p>
-          <p>A family-owned highland retreat in the heart of Zakopane. Crafted for guests who value authenticity, comfort, and nature.</p>
+          <p data-i18n="footer.brand">A family-owned highland retreat in the heart of Zakopane. Crafted for guests who value authenticity, comfort, and nature.</p>
           <div class="footer-social">
             <a href="#" aria-label="Instagram">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
@@ -628,35 +729,40 @@
           </div>
         </div>
         <div class="footer-links">
-          <h4>Quick Links</h4>
+          <h4 data-i18n="footer.linksTitle">Quick Links</h4>
           <ul>
-            <li><a href="#about">The Villa</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#amenities">Amenities</a></li>
-            <li><a href="#location">Location</a></li>
-            <li><a href="#reviews">Reviews</a></li>
-            <li><a href="#pricing">Rates</a></li>
-            <li><a href="#booking">Book Direct</a></li>
+            <li><a href="#about" data-i18n="footer.lVilla">The Villa</a></li>
+            <li><a href="#gallery" data-i18n="footer.lGallery">Gallery</a></li>
+            <li><a href="#amenities" data-i18n="footer.lAmenities">Amenities</a></li>
+            <li><a href="#location" data-i18n="footer.lLocation">Location</a></li>
+            <li><a href="#activities" data-i18n="footer.lActivities">Activities</a></li>
+            <li><a href="#reviews" data-i18n="footer.lReviews">Reviews</a></li>
+            <li><a href="#contact" data-i18n="footer.lContact">Contact</a></li>
           </ul>
         </div>
         <div class="footer-contact">
-          <h4>Contact</h4>
+          <h4 data-i18n="footer.contactTitle">Contact</h4>
           <p>ul. Sienkiewicza 18<br/>34-500 Zakopane<br/>Małopolska, Poland</p>
           <a href="mailto:hello@maciejowka.pl">hello@maciejowka.pl</a>
           <a href="tel:+48123456789">+48 123 456 789</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2025 Willa Maciejówka. All rights reserved.</p>
+        <p data-i18n="footer.copy">© 2025 Willa Maciejówka. All rights reserved.</p>
         <div class="footer-legal">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms & Conditions</a>
+          <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+          <a href="#" data-i18n="footer.terms">Terms & Conditions</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <a href="#booking" class="sticky-cta" id="stickyCta">Book Direct — Save up to 20%</a>
+  <a href="#"
+     class="sticky-cta i_do_sell_booking_widget_start"
+     id="stickyCta"
+     onclick="generateWidgetIdoSellBooking(this)"
+     language="0"
+     data-i18n="sticky.cta">Book Direct — Save up to 20%</a>
 
   <script src="script.js"></script>
 </body>
