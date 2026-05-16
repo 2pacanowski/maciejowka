@@ -662,6 +662,14 @@
                 data-i18n-placeholder="contact.messagePlaceholder"
                 placeholder="Questions about the villa, dates you're considering, anything at all — we'd love to hear from you."></textarea>
             </div>
+            <div class="form-group form-group--consent">
+              <label class="consent-label">
+                <input type="checkbox" id="gdprConsent" name="gdprConsent" required />
+                <span class="consent-box"></span>
+                <span class="consent-text" data-i18n-html="contact.consent">I agree to my personal data being processed by Willa Maciejówka for the purpose of responding to my enquiry, in accordance with the <a href="#" class="consent-link">Privacy Policy</a>. (Required)</span>
+              </label>
+              <p class="consent-error" id="consentError" hidden data-i18n="contact.consentError">Please accept the privacy policy to continue.</p>
+            </div>
             <button type="submit" class="btn btn-primary btn-full">
               <span class="btn-text" data-i18n="contact.send">Send Message</span>
               <span class="btn-loading" hidden data-i18n="contact.sending">Sending…</span>

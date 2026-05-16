@@ -127,6 +127,8 @@ const translations = {
     'contact.send':             'Send Message',
     'contact.sending':          'Sending…',
     'contact.note':             'We reply within 4 hours · Your details are never shared',
+    'contact.consent':          'I agree to my personal data being processed by Willa Maciejówka for the purpose of responding to my enquiry, in accordance with the <a href="#" class="consent-link">Privacy Policy</a>. (Required)',
+    'contact.consentError':     'Please accept the privacy policy to continue.',
     'contact.successTitle':     'Message Received!',
     'contact.successBody':      'Thank you for getting in touch — we\'ll reply within 4 hours.',
 
@@ -275,6 +277,8 @@ const translations = {
     'contact.send':             'Wyślij wiadomość',
     'contact.sending':          'Wysyłanie…',
     'contact.note':             'Odpowiadamy w ciągu 4 godzin · Twoje dane są bezpieczne',
+    'contact.consent':          'Wyrażam zgodę na przetwarzanie moich danych osobowych przez Willę Maciejówkę w celu udzielenia odpowiedzi na moje zapytanie, zgodnie z <a href="#" class="consent-link">Polityką Prywatności</a>. (Wymagane)',
+    'contact.consentError':     'Aby kontynuować, zaakceptuj politykę prywatności.',
     'contact.successTitle':     'Wiadomość otrzymana!',
     'contact.successBody':      'Dziękujemy za kontakt — odpowiemy w ciągu 4 godzin.',
 
@@ -531,21 +535,46 @@ function initContactForm() {
     success.hidden = false;
   });
 
-  form.querySelectorAll('input, textarea').forEach(f => {
+  form.querySelectorAll('input:not([type="checkbox"]), textarea').forEach(f => {
     f.addEventListener('input', () => f.classList.remove('error'));
+  });
+
+  const consent = form.querySelector('#gdprConsent');
+  consent?.addEventListener('change', () => {
+    consent.closest('.form-group--consent')?.classList.remove('error');
+    const err = document.getElementById('consentError');
+    if (err) err.hidden = true;
   });
 }
 
 function validateForm(form) {
   let valid = true;
-  form.querySelectorAll('[required]').forEach(field => {
+
+  // Text / email / textarea fields
+  form.querySelectorAll('[required]:not([type="checkbox"])').forEach(field => {
     field.classList.remove('error');
     if (!field.value.trim()) { field.classList.add('error'); valid = false; }
   });
+
+  // Email format
   const email = form.querySelector('[type="email"]');
   if (email?.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
     email.classList.add('error'); valid = false;
   }
+
+  // GDPR consent checkbox
+  const consent      = form.querySelector('#gdprConsent');
+  const consentGroup = consent?.closest('.form-group--consent');
+  const consentError = document.getElementById('consentError');
+  if (consent && !consent.checked) {
+    consentGroup?.classList.add('error');
+    if (consentError) consentError.hidden = false;
+    valid = false;
+  } else {
+    consentGroup?.classList.remove('error');
+    if (consentError) consentError.hidden = true;
+  }
+
   if (!valid) form.querySelector('.error')?.focus();
   return valid;
 }
