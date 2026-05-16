@@ -29,18 +29,18 @@
         <li><a href="#activities" data-i18n="nav.activities">Activities</a></li>
         <li><a href="#reviews" data-i18n="nav.reviews">Reviews</a></li>
         <li>
-          <a href="#"
-             class="nav-cta i_do_sell_booking_widget_start"
-             onclick="generateWidgetIdoSellBooking(this)"
-             language="0"
-             data-i18n="nav.book">Book Direct</a>
-        </li>
-        <li>
           <button class="lang-toggle" id="langToggle" aria-label="Switch language">
             <span class="lang-en">EN</span>
             <span class="lang-sep">|</span>
             <span class="lang-pl">PL</span>
           </button>
+        </li>
+        <li>
+          <a href="#"
+             class="nav-cta"
+             onclick="generateWidgetIdoSellBooking(this)"
+             language="0"
+             data-i18n="nav.book">Book Direct</a>
         </li>
       </ul>
       <div class="nav-right-mobile">
@@ -71,14 +71,14 @@
   ═══════════════════════════════════════════ -->
   <section id="hero">
     <div class="hero-bg">
-      <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe2e6?auto=format&fit=crop&w=1920&q=85" alt="Willa Maciejówka mountain retreat" class="hero-img" />
+      <img src="vacation home zakopane.webp" alt="Willa Maciejówka mountain retreat" class="hero-img" />
       <div class="hero-overlay"></div>
     </div>
     <div class="folk-band-top"></div>
     <div class="hero-content">
-      <p class="hero-eyebrow" data-i18n="hero.eyebrow">ul. Sienkiewicza 18 · Zakopane · Tatra Mountains</p>
+      <p class="hero-eyebrow" data-i18n="hero.eyebrow">A century of stories since 1901</p>
       <h1 class="hero-title">Willa<br/><em>Maciejówka</em></h1>
-      <p class="hero-subtitle" data-i18n="hero.subtitle">A century-old Góral landmark in the heart of Zakopane — steps from Krupówki, in a peaceful residential street. Perfect for families and groups of friends. Dogs welcome.</p>
+      <p class="hero-subtitle" data-i18n="hero.subtitle">Discover a century-old villa in the heart of Zakopane - steps from Krupówki, in a peaceful residential street. Perfect for families and groups of friends.</p>
       <div class="hero-badges">
         <div class="badge">
           <span class="badge-star">★★★★★</span>
@@ -95,7 +95,7 @@
       </div>
       <div class="hero-actions">
         <a href="#"
-           class="btn btn-primary i_do_sell_booking_widget_start"
+           class="btn btn-primary"
            onclick="generateWidgetIdoSellBooking(this)"
            language="0"
            data-i18n="hero.bookBtn">Book Direct — No Fees</a>
@@ -162,8 +162,8 @@
       <div class="about-grid">
         <div class="about-text reveal">
           <p class="lead" data-i18n="about.lead">Built in 1901 and listed on Poland's National Register of Monuments, Willa Maciejówka stands on ul. Sienkiewicza — one of Zakopane's most sought-after central streets. The original larch-log structure, hand-notched by local Góral craftsmen, has been carefully restored and fitted with every modern comfort while preserving its historic character.</p>
-          <p data-i18n="about.body1">The ground floor opens into a double-height living room with traditional folk-art details. A fully-equipped large kitchen leads into a sunny conservatory with a generous dining table — the heart of every family gathering. Outside, a private garden offers a quiet retreat just moments from Zakopane's vibrant centre.</p>
-          <p data-i18n="about.body2">Upstairs, four bedrooms — each with large double beds, quality linens and thoughtful folk-art details — sleep up to nine guests in comfort. Three full bathrooms ensure nobody has to queue. Ideal for families with children and groups of friends — dogs are warmly welcome.</p>
+          <p data-i18n="about.body1">The ground floor welcomes you with a spacious hall leading to two comfortable bedrooms, each with a large double bed, and a full bathroom. A fully-equipped kitchen flows into a sunny conservatory with a generous dining table — the heart of every family gathering. Outside, a private garden offers a quiet retreat just moments from Zakopane's vibrant centre.</p>
+          <p data-i18n="about.body2">Upstairs, a cosy living room is the perfect place to unwind. Two bedrooms continue the villa's folk-art character, both featuring traditional triangular windows that flood the rooms with mountain light. The master bedroom enjoys a private en-suite, while the second bedroom — with a double bed and an additional single — is ideal for families with young children. A shared bathroom serves the rest of the floor. Dogs are welcome.</p>
           <ul class="about-stats">
             <li>
               <span class="stat-num">280</span>
@@ -174,12 +174,12 @@
               <span class="stat-label" data-i18n="about.stat2">bedrooms</span>
             </li>
             <li>
-              <span class="stat-num">9</span>
-              <span class="stat-label" data-i18n="about.stat3">guests max</span>
-            </li>
-            <li>
               <span class="stat-num">3</span>
               <span class="stat-label" data-i18n="about.stat4">bathrooms</span>
+            </li>
+            <li>
+              <span class="stat-num">9</span>
+              <span class="stat-label" data-i18n="about.stat3">guests max</span>
             </li>
           </ul>
         </div>
@@ -407,7 +407,6 @@
        GUEST REVIEWS
   ═══════════════════════════════════════════ -->
   <section id="reviews" class="reviews-section">
-    <div class="folk-divider folk-divider--light"></div>
     <div class="container">
       <div class="section-header reveal">
         <p class="eyebrow" data-i18n="reviews.eyebrow">Guest Voices</p>
@@ -417,7 +416,7 @@
       <div class="platform-ratings reveal">
         <div class="platform-card">
           <div class="platform-name">Airbnb</div>
-          <div class="platform-score">5.0 / 5</div>
+          <div class="platform-score">5 / 5</div>
           <div class="platform-stars">★★★★★</div>
           <div class="platform-meta" data-i18n="reviews.airbnbMeta">8 reviews</div>
           <div class="guest-fav-badge" data-i18n="reviews.guestFav">★ Guest Favourite</div>
@@ -441,12 +440,12 @@
             <div class="review-stars">★★★★★</div>
             <span class="source-badge source-direct" data-i18n="reviews.sourceDirect">Direct</span>
           </div>
-          <blockquote>"We arrived on a snowy Friday evening, wine was chilling and the conservatory table was set — we felt at home within minutes. Three days felt like two weeks of rest. We'll be back every winter."</blockquote>
+          <blockquote>Willa Maciejówka is a beautiful home with a lot of character. The rooms are spacious and decorated in a cozy style. There are 3 comfortable bathrooms and a fully equipped kitchen. It’s a place you won’t want to leave. The location is a major plus. I highly recommend it and hope to return there!</blockquote>
           <div class="reviewer">
-            <div class="reviewer-avatar">AM</div>
+            <div class="reviewer-avatar">N</div>
             <div>
-              <strong>Anna & Marek</strong>
-              <span>Warsaw · February 2025</span>
+              <strong>Natalia</strong>
+              <span>Poland · February 2026</span>
             </div>
           </div>
         </div>
@@ -455,26 +454,26 @@
             <div class="review-stars">★★★★★</div>
             <span class="source-badge source-airbnb">Airbnb</span>
           </div>
-          <blockquote>"Absolutely stunning. After a full day of skiing on Kasprowy we came back to this incredible building and couldn't believe our luck. The woodwork and details feel like a museum but it's completely comfortable to live in."</blockquote>
+          <blockquote>We had a wonderful few days skiing at Artur’s place. The building is beautiful and historic, cosy and charming. The kitchen was well equipped, the bedrooms spacious and there was as everything we needed. Close to town but peaceful area with off street parking. We’d love to stay again if return to Zakopane</blockquote>
           <div class="reviewer">
-            <div class="reviewer-avatar">JS</div>
+            <div class="reviewer-avatar">RT</div>
             <div>
-              <strong>Jakob S.</strong>
-              <span>Kraków · January 2025</span>
+              <strong>Ruth T.</strong>
+              <span>UK · February 2025</span>
             </div>
           </div>
         </div>
         <div class="review-card reveal">
           <div class="review-header">
             <div class="review-stars">★★★★★</div>
-            <span class="source-badge source-booking">Booking.com</span>
+            <span class="source-badge source-direct sourceDirect">Direct</span>
           </div>
-          <blockquote>"We came as a family of nine for New Year and it was the best decision we've ever made. Kids loved exploring Krupówki on foot, adults loved the conservatory breakfasts and evening walks. The host was incredibly responsive too."</blockquote>
+          <blockquote>I spent a family vacation at Willa Maciejówka, and it was truly a dream Christmas time. Snow, a cozy cottage, and a special atmosphere. The owner welcomed us very warmly; you can tell right away that he takes great care of the house and his guests’ comfort. The parking is also a huge plus, especially convenient when arriving with a larger group. Definitely a place worth recommending. </blockquote>
           <div class="reviewer">
-            <div class="reviewer-avatar">MK</div>
+            <div class="reviewer-avatar">NO</div>
             <div>
-              <strong>Marta K.</strong>
-              <span>Gdańsk · December 2024</span>
+              <strong>Nathalie O.</strong>
+              <span>USA · December 2025</span>
             </div>
           </div>
         </div>
@@ -483,26 +482,26 @@
             <div class="review-stars">★★★★★</div>
             <span class="source-badge source-airbnb">Airbnb</span>
           </div>
-          <blockquote>"We've rented places in the Alps and Dolomites, but Maciejówka has a soul those places don't. The craftsmanship of the building, the kindness of the owner, and those mountain mornings — impossible to beat at this price point."</blockquote>
+          <blockquote>We had an absolutely fantastic stay at this beautiful house in Zakopane. There were seven of us and there was more than enough space for everyone to relax comfortably. The rooms were well-equipped, beautifully finished, and the beds were very comfortable. The whole property was spotless and clearly maintained with great care...</blockquote>
           <div class="reviewer">
-            <div class="reviewer-avatar">PL</div>
+            <div class="reviewer-avatar">RH</div>
             <div>
-              <strong>Peter & Lena</strong>
-              <span>Berlin · August 2024</span>
+              <strong>Richard H.</strong>
+              <span>UK · February 2025</span>
             </div>
           </div>
         </div>
         <div class="review-card reveal">
           <div class="review-header">
             <div class="review-stars">★★★★★</div>
-            <span class="source-badge source-direct" data-i18n="reviews.sourceDirect">Direct</span>
+            <span class="source-badge source-airbnb" data-i18n="reviews.source-airbnb">Airbnb</span>
           </div>
-          <blockquote>"Booked directly after finding this website and saved nearly 400 PLN vs. what I saw on Airbnb. The booking process was simple, check-in was smooth, and the villa exceeded every expectation. Highly recommend booking direct."</blockquote>
+          <blockquote>Artur was very helpful and precise in giving all the directions, the house exceeded expectations, I recommend it to everyone, I will definitely return.</blockquote>
           <div class="reviewer">
-            <div class="reviewer-avatar">TO</div>
+            <div class="reviewer-avatar">RV</div>
             <div>
-              <strong>Tomasz O.</strong>
-              <span>Wrocław · March 2025</span>
+              <strong>Roberto V.</strong>
+              <span>Italy · January 2026</span>
             </div>
           </div>
         </div>
@@ -511,18 +510,17 @@
             <div class="review-stars">★★★★★</div>
             <span class="source-badge source-booking">Booking.com</span>
           </div>
-          <blockquote>"The hike to Morskie Oko, the sunny conservatory breakfasts, the evening strolls on Krupówki — it was one of those trips where everything goes right. Thank you for creating such a special place."</blockquote>
+          <blockquote>The photos don't do it justice... The cottage is in a beautiful location, very close to downtown. The layout is great. The kitchen is spacious. It's perfect for me. I'm really impressed... I'll definitely be back. </blockquote>
           <div class="reviewer">
-            <div class="reviewer-avatar">KW</div>
+            <div class="reviewer-avatar">KŁ</div>
             <div>
-              <strong>Kasia W.</strong>
-              <span>Poznań · July 2024</span>
+              <strong>Krzysztof Ł.</strong>
+              <span>Poland · April 2026</span>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="folk-divider folk-divider--flip folk-divider--light"></div>
   </section>
 
   <!-- ═══════════════════════════════════════════
@@ -621,21 +619,21 @@
           <div class="contact-links">
             <a href="https://wa.me/48123456789" class="contact-pill contact-pill--whatsapp" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              <span data-i18n="contact.whatsapp">WhatsApp Us</span>
+              <span data-i18n="contact.whatsapp">WhatsApp</span>
             </a>
-            <a href="mailto:hello@maciejowka.pl" class="contact-pill contact-pill--email">
+            <a href="mailto:maciejowka.willa@gmail.com" class="contact-pill contact-pill--email">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              hello@maciejowka.pl
+              maciejowka.willa@gmail.com
             </a>
           </div>
-          <div class="contact-book-prompt">
+          <!-- <div class="contact-book-prompt">
             <p data-i18n="contact.bookPrompt">Ready to book? Use our instant reservation system:</p>
             <a href="#"
-               class="btn btn-primary i_do_sell_booking_widget_start"
+               class="btn btn-primary"
                onclick="generateWidgetIdoSellBooking(this)"
                language="0"
                data-i18n="contact.bookBtn">Check Availability & Book</a>
-          </div>
+          </div> -->
         </div>
         <div class="contact-form-wrap reveal">
           <form class="contact-form" id="contactForm" novalidate>
@@ -758,7 +756,7 @@
   </footer>
 
   <a href="#"
-     class="sticky-cta i_do_sell_booking_widget_start"
+     class="sticky-cta"
      id="stickyCta"
      onclick="generateWidgetIdoSellBooking(this)"
      language="0"

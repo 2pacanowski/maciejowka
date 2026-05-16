@@ -8,7 +8,8 @@
   --green:        #2d4a3e;
   --green-mid:    #3d6b58;
   --red:          #b20711;
-  --red-light:    #e84049;
+  --red-dark: #8a060e;
+  --red-light:    #b20711;
   --cream:        #f5f0e8;
   --cream-dark:   #ede6d8;
   --dark:         #1a1a1a;
@@ -133,13 +134,11 @@ p { font-size: var(--fs-base); }
 .btn-primary {
   background: var(--red);
   color: var(--white);
-  border-color: var(--red);
+  border: none;
 }
 .btn-primary:hover {
-  background: var(--red-light);
+  background: var(--red-dark);
   border-color: var(--red-light);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(178, 7, 17, 0.35);
 }
 
 .btn-ghost {
@@ -302,8 +301,13 @@ p { font-size: var(--fs-base); }
   border-radius: var(--radius);
   font-size: var(--fs-sm) !important;
   font-weight: 600 !important;
+  transition: all var(--transition) !important;
+
 }
-.nav-cta:hover { background: var(--red-light) !important; color: var(--white) !important; }
+.nav-cta:hover { 
+  background: var(--red-dark) !important; 
+  color: var(--white) !important; 
+}
 
 .nav-right-mobile { display: none; align-items: center; gap: 12px; }
 .lang-toggle--mobile { border-color: rgba(255,255,255,0.35); }
@@ -899,17 +903,17 @@ p { font-size: var(--fs-base); }
   font-size: var(--fs-base);
   font-weight: 600;
   transition: all var(--transition);
-  max-width: 280px;
+  max-width: 320px;
 }
 .contact-pill svg { width: 20px; height: 20px; flex-shrink: 0; }
 .contact-pill--whatsapp { background: #25D366; color: var(--white); }
-.contact-pill--whatsapp:hover { background: #1ebe5b; transform: translateX(4px); }
+.contact-pill--whatsapp:hover { background: #1ebe5b; }
 .contact-pill--email {
   background: rgba(255,255,255,0.1);
   color: var(--white);
   border: 1px solid rgba(255,255,255,0.2);
 }
-.contact-pill--email:hover { background: rgba(255,255,255,0.18); transform: translateX(4px); }
+.contact-pill--email:hover { background: rgba(255,255,255,0.18); }
 
 .contact-book-prompt p {
   font-size: var(--fs-sm);
@@ -1066,7 +1070,6 @@ p { font-size: var(--fs-base); }
   border-radius: 100px;
   font-weight: 700;
   font-size: var(--fs-sm);
-  box-shadow: 0 8px 32px rgba(178,7,17,0.45);
   z-index: 900;
   opacity: 0;
   transform: translateY(16px);
@@ -1076,9 +1079,7 @@ p { font-size: var(--fs-base); }
 }
 .sticky-cta.visible { opacity: 1; transform: translateY(0); pointer-events: all; }
 .sticky-cta:hover {
-  background: var(--red-light);
-  transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(178,7,17,0.55);
+  background: var(--red-dark);
 }
 
 /* ═══════════════════════════════════════════
