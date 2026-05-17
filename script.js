@@ -133,6 +133,7 @@ const translations = {
     'contact.consentError':     'Please accept the privacy policy to continue.',
     'contact.successTitle':     'Message Received!',
     'contact.successBody':      'Thank you for getting in touch — we\'ll reply within 4 hours.',
+    'contact.errorMsg':         'Something went wrong. Please try again or email us directly.',
 
     'trust.t1': 'Secure Payments',       'trust.d1': 'Bank transfer or Stripe — fully protected',
     'trust.t2': '5★ Airbnb · 10/10 Booking.com', 'trust.d2': 'Top 10% of properties in Zakopane',
@@ -285,6 +286,7 @@ const translations = {
     'contact.consentError':     'Aby kontynuować, zaakceptuj politykę prywatności.',
     'contact.successTitle':     'Wiadomość otrzymana!',
     'contact.successBody':      'Dziękujemy za kontakt — odpowiemy w ciągu 4 godzin.',
+    'contact.errorMsg':         'Coś poszło nie tak. Spróbuj ponownie lub napisz do nas bezpośrednio.',
 
     'trust.t1': 'Bezpieczne płatności',    'trust.d1': 'Przelew bankowy lub Stripe — w pełni chronione',
     'trust.t2': '5★ Airbnb · 10/10 Booking.com', 'trust.d2': 'Top 10% obiektów w Zakopanem',
@@ -532,11 +534,20 @@ function initContactForm() {
     btnText.hidden = true;
     loading.hidden = false;
 
-    // Simulate submission — replace with real endpoint
-    await new Promise(r => setTimeout(r, 1400));
-
-    form.hidden    = true;
-    success.hidden = false;
+    try {
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString(),
+      });
+      form.hidden    = true;
+      success.hidden = false;
+    } catch (_) {
+      btn.disabled   = false;
+      btnText.hidden = false;
+      loading.hidden = true;
+      document.getElementById('formError').hidden = false;
+    }
   });
 
   form.querySelectorAll('input:not([type="checkbox"]), textarea').forEach(f => {
