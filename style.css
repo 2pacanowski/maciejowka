@@ -1029,6 +1029,13 @@ p { font-size: var(--fs-base); }
 
 }
 
+#iai_book_form {
+  background-color: #2d4a3e !important;
+}
+
+#iai_book_se {
+  border: none !important;
+}
 .consent-link {
   color: var(--green);
   text-decoration: underline;
