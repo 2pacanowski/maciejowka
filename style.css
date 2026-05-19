@@ -144,7 +144,7 @@ hr.divider { border: none; border-top: 1px solid var(--rule-light); margin: 0; }
 
 /* ——— HERO ——— */
 .hero {
-  min-height: 92vh;
+  min-height: 100vh;
   position: relative; color: var(--linen); overflow: hidden; background: var(--ink);
   display: flex; flex-direction: column;
 }
