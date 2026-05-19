@@ -9,25 +9,27 @@ updateNav();
 // ——— HAMBURGER ———
 const hamburger = document.getElementById('navHamburger');
 const navMobile = document.getElementById('navMobile');
+function closeMobileMenu() {
+  navMobile.classList.remove('open');
+  nav.classList.remove('menu-open');
+  hamburger.setAttribute('aria-expanded', 'false');
+  navMobile.setAttribute('aria-hidden', 'true');
+}
+
 hamburger.addEventListener('click', e => {
   e.stopPropagation();
   const open = navMobile.classList.toggle('open');
+  nav.classList.toggle('menu-open', open);
   hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
   navMobile.setAttribute('aria-hidden', open ? 'false' : 'true');
 });
 document.addEventListener('click', e => {
   if (!navMobile.contains(e.target) && !hamburger.contains(e.target)) {
-    navMobile.classList.remove('open');
-    hamburger.setAttribute('aria-expanded', 'false');
-    navMobile.setAttribute('aria-hidden', 'true');
+    closeMobileMenu();
   }
 });
 navMobile.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => {
-    navMobile.classList.remove('open');
-    hamburger.setAttribute('aria-expanded', 'false');
-    navMobile.setAttribute('aria-hidden', 'true');
-  });
+  a.addEventListener('click', closeMobileMenu);
 });
 
 // ——— LANGUAGE DROPDOWN ———
