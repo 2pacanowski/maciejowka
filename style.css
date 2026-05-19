@@ -159,8 +159,8 @@ hr.divider { border: none; border-top: 1px solid var(--rule-light); margin: 0; }
   background-image: radial-gradient(ellipse at 30% 80%, rgba(0,0,0,0.45), transparent 60%);
 }
 .hero-inner {
-  position: relative; max-width: var(--max); margin: 0 auto; width: 100%;
-  padding: 0 var(--gutter) 96px;
+  position: relative; max-width: 1600px; margin: 0 auto; width: 100%;
+  padding: 0 48px 96px;
   flex: 1;
   display: flex; flex-direction: column; justify-content: flex-end;
 }
@@ -457,6 +457,7 @@ hr.divider { border: none; border-top: 1px solid var(--rule-light); margin: 0; }
   .nav-inner { padding: 18px 32px; }
 
   /* hero */
+  .hero-inner { padding: 0 32px 96px; }
   .hero .lede { font-size: 22px; }
   .hero-meta { gap: 32px; }
 
