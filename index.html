@@ -30,7 +30,7 @@
   }
 
   *, *::before, *::after { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; scroll-padding-top: 90px; }
   body {
     margin: 0;
     background: var(--linen);
@@ -91,7 +91,7 @@
   /* ——— NAV ——— */
   .nav {
     position: sticky; top: 0; z-index: 100;
-    background: none;
+    background: transparent;
     border-bottom: 1px solid transparent;
     transition: background 0.3s ease, border-color 0.3s ease;
   }
