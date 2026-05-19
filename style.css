@@ -315,7 +315,7 @@ hr.divider { border: none; border-top: 1px solid var(--rule-light); margin: 0; }
 }
 
   /* ——— REVIEWS ——— */
-.reviews { background: var(--bark); color: var(--linen); }
+.reviews { background: var(--bark); color: var(--linen); overflow: hidden; }
 .reviews .section-head h2 { color: var(--linen); }
 .reviews .section-head .lede { color: var(--mist); }
 .reviews .eyebrow { color: var(--mist); }
