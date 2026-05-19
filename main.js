@@ -143,6 +143,12 @@ const submitBtn = document.getElementById('submitBtn');
 const btnLabel = submitBtn.querySelector('.btn-label');
 const btnLoading = submitBtn.querySelector('.btn-loading');
 
+function setLoading(on) {
+  submitBtn.disabled = on;
+  btnLabel.hidden = on;
+  btnLoading.hidden = !on;
+}
+
 consentCheckbox.addEventListener('change', () => {
   if (consentCheckbox.checked) {
     consentWrap.classList.remove('error');
@@ -179,9 +185,7 @@ form.addEventListener('submit', async e => {
 
   if (!valid) return;
 
-  submitBtn.disabled = true;
-  btnLabel.hidden = true;
-  btnLoading.hidden = false;
+  setLoading(true);
 
   try {
     await fetch('/', {
@@ -192,9 +196,7 @@ form.addEventListener('submit', async e => {
     form.hidden = true;
     formSuccess.classList.add('visible');
   } catch (_) {
-    submitBtn.disabled = false;
-    btnLabel.hidden = false;
-    btnLoading.hidden = true;
+    setLoading(false);
     formErrorMsg.classList.add('visible');
   }
 });

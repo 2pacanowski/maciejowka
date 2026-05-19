@@ -51,6 +51,11 @@ h1,h2,h3,h4 { font-family: var(--display); font-weight: 400; margin: 0; letter-s
 
 hr.divider { border: none; border-top: 1px solid var(--rule-light); margin: 0; }
 
+/* ——— utilities ——— */
+.eyebrow + h2, .eyebrow + h3 { margin-top: 18px; }
+.section-cta { text-align: center; margin-top: 56px; }
+.about-image-wrap { position: relative; }
+
 /* rosette divider */
 .rosette-divider {
   display: flex; align-items: center; justify-content: center; gap: 28px;
@@ -287,7 +292,7 @@ hr.divider { border: none; border-top: 1px solid var(--rule-light); margin: 0; }
 .nearby p.lede { font-family: var(--serif); font-style: italic; font-size: 20px; color: var(--bark); margin: 0 0 32px; }
 .nearby-list { list-style: none; margin: 0; padding: 0; }
 .nearby-list li { display: grid; grid-template-columns: 24px 1fr auto; gap: 16px; align-items: baseline; padding: 18px 0; border-bottom: 1px solid var(--rule-light); }
-.nearby-list .marker { width: 10px; height: 10px; border-radius: 50%; transform: translateY(4px); }
+.nearby-list .marker { width: 10px; height: 10px; border-radius: 50%; transform: translateY(4px); background: var(--red); }
 .nearby-list .name { font-family: var(--display); font-size: 22px; letter-spacing: 0.02em; text-transform: uppercase; }
 .nearby-list .name small { display: block; font-family: var(--serif); font-style: italic; font-size: 16px; color: var(--bark); letter-spacing: 0; text-transform: none; margin-top: 4px; }
 .nearby-list .dist { font-family: var(--sans); font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--larch); }
@@ -406,6 +411,8 @@ hr.divider { border: none; border-top: 1px solid var(--rule-light); margin: 0; }
 .footer ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; font-family: var(--serif); font-size: 16px; }
 .footer ul a { color: var(--mist); transition: color 0.15s ease; }
 .footer ul a:hover { color: var(--linen); }
+.footer ul button { background: none; border: none; padding: 0; font-family: var(--serif); font-size: 16px; color: var(--mist); cursor: pointer; transition: color 0.15s ease; }
+.footer ul button:hover { color: var(--linen); }
 .footer-bottom { border-top: 1px solid rgba(245,239,221,0.18); padding-top: 28px; display: flex; justify-content: space-between; align-items: center; font-family: var(--sans); font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--larch); flex-wrap: wrap; gap: 16px; }
 .footer-bottom .legal { display: flex; gap: 24px; }
 .footer-rosette { width: 32px; height: 32px; color: var(--red); }
