@@ -74,13 +74,14 @@ hr.divider { border: none; border-top: 1px solid var(--rule-light); margin: 0; }
   padding: 18px 32px; border: 1px solid currentColor;
   background: transparent; color: var(--ink);
   transition: all 0.2s ease; cursor: pointer;
+  width: 250px;
 }
 .btn:hover { background: var(--ink); color: var(--linen); border-color: var(--ink); }
 .btn-red { background: var(--red); color: var(--linen); border-color: var(--red); }
 .btn-red:hover { background: var(--red-deep); border-color: var(--red-deep); color: var(--linen); }
 .btn-cream { background: var(--linen); color: var(--ink); border-color: var(--linen); }
 .btn-cream:hover { background: transparent; color: var(--linen); border-color: var(--linen); }
-.btn .arrow { font-family: var(--serif); font-size: 18px; letter-spacing: 0; }
+.btn .arrow { font-family: var(--serif); font-size: 18px; letter-spacing: 0; line-height: 0;}
 
 /* ——— NAV ——— */
 .nav {
