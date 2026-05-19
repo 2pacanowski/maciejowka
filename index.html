@@ -1,0 +1,1186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Willa Maciejówka — Zakopane</title>
+<meta name="description" content="Book Willa Maciejówka directly and save 10–20%. A listed 1901 Góral villa in central Zakopane, steps from Krupówki. Sleeps 9. Dogs welcome.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red:      #A91D2A;
+    --red-deep: #7A1520;
+    --ink:      #1F2521;
+    --bark:     #3B2E22;
+    --larch:    #8C6E4A;
+    --mist:     #D9CFC2;
+    --linen:    #F5EFDD;
+    --snow:     #FAF6EE;
+    --rule:       rgba(31,37,33,0.18);
+    --rule-light: rgba(31,37,33,0.10);
+
+    --display: "Marcellus","Trajan Pro",serif;
+    --serif:   "Cormorant Garamond","EB Garamond",Georgia,serif;
+    --sans:    "Jost","Helvetica Neue",Helvetica,Arial,sans-serif;
+
+    --max:    1280px;
+    --gutter: 80px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--linen);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 18px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; cursor: pointer; }
+
+  /* ——— typography ——— */
+  h1,h2,h3,h4 { font-family: var(--display); font-weight: 400; margin: 0; letter-spacing: 0.01em; }
+  .eyebrow {
+    font-family: var(--sans); font-size: 13px;
+    letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--larch); font-weight: 400;
+  }
+
+  /* ——— layout ——— */
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+  .section { padding: 120px 0; position: relative; }
+  .section-head { text-align: center; margin-bottom: 72px; }
+  .section-head .eyebrow { display: inline-block; }
+  .section-head h2 { font-size: 56px; line-height: 1.05; margin-top: 18px; max-width: 22ch; margin-left: auto; margin-right: auto; }
+  .section-head p.lede { font-style: italic; font-size: 22px; color: var(--bark); max-width: 56ch; margin: 22px auto 0; }
+
+  hr.divider { border: none; border-top: 1px solid var(--rule-light); margin: 0; }
+
+  /* rosette divider */
+  .rosette-divider {
+    display: flex; align-items: center; justify-content: center; gap: 28px;
+    margin: 0 auto; max-width: 480px;
+  }
+  .rosette-divider::before, .rosette-divider::after {
+    content: ""; flex: 1; height: 1px; background: var(--rule-light);
+  }
+  .rosette-divider svg { width: 36px; height: 36px; color: var(--red); flex: 0 0 auto; }
+
+  /* ——— buttons ——— */
+  .btn {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-family: var(--sans); font-size: 13px; font-weight: 500;
+    letter-spacing: 0.28em; text-transform: uppercase;
+    padding: 18px 32px; border: 1px solid currentColor;
+    background: transparent; color: var(--ink);
+    transition: all 0.2s ease; cursor: pointer;
+  }
+  .btn:hover { background: var(--ink); color: var(--linen); border-color: var(--ink); }
+  .btn-red { background: var(--red); color: var(--linen); border-color: var(--red); }
+  .btn-red:hover { background: var(--red-deep); border-color: var(--red-deep); color: var(--linen); }
+  .btn-cream { background: var(--linen); color: var(--ink); border-color: var(--linen); }
+  .btn-cream:hover { background: transparent; color: var(--linen); border-color: var(--linen); }
+  .btn .arrow { font-family: var(--serif); font-size: 18px; letter-spacing: 0; }
+
+  /* ——— NAV ——— */
+  .nav {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--linen);
+    border-bottom: 1px solid var(--rule-light);
+    transition: padding 0.2s ease;
+  }
+  .nav-inner {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 22px 48px; max-width: 1600px; margin: 0 auto; gap: 24px;
+  }
+  .nav-links {
+    display: flex; gap: 36px; list-style: none; margin: 0; padding: 0;
+    font-family: var(--sans); font-size: 12px;
+    letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink);
+  }
+  .nav-links a { transition: color 0.15s ease; }
+  .nav-links a:hover { color: var(--red); }
+  .nav-brand { display: inline-flex; align-items: center; color: var(--red); line-height: 0; }
+  .nav-brand svg { width: 38px; height: 38px; display: block; }
+  .nav-right { display: flex; align-items: center; gap: 36px; }
+
+  /* language dropdown */
+  .nav-lang { position: relative; }
+  .nav-lang-trigger {
+    background: transparent; border: 1px solid var(--rule);
+    padding: 9px 14px; font-family: var(--sans); font-size: 11px;
+    letter-spacing: 0.24em; text-transform: uppercase; color: var(--ink);
+    display: inline-flex; align-items: center; gap: 8px;
+    cursor: pointer; transition: border-color 0.15s ease;
+  }
+  .nav-lang-trigger:hover { border-color: var(--ink); }
+  .nav-lang-trigger svg { width: 10px; height: 6px; transition: transform 0.2s ease; }
+  .nav-lang.open .nav-lang-trigger svg { transform: rotate(180deg); }
+  .nav-lang-menu {
+    position: absolute; top: calc(100% + 8px); right: 0;
+    background: var(--linen); border: 1px solid var(--rule);
+    list-style: none; margin: 0; padding: 6px 0; min-width: 140px;
+    font-family: var(--sans); font-size: 12px; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--ink);
+    box-shadow: 0 12px 32px -16px rgba(31,37,33,0.25);
+    opacity: 0; visibility: hidden; transform: translateY(-6px);
+    transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+  }
+  .nav-lang.open .nav-lang-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+  .nav-lang-menu li { padding: 10px 18px; cursor: pointer; transition: background 0.15s ease, color 0.15s ease; }
+  .nav-lang-menu li:hover { background: rgba(31,37,33,0.05); color: var(--red); }
+  .nav-lang-menu li[aria-selected="true"] { color: var(--red); }
+  .nav-cta {
+    font-family: var(--sans); font-size: 12px; letter-spacing: 0.24em;
+    text-transform: uppercase; padding: 13px 22px;
+    background: var(--red); color: var(--linen); border: 1px solid var(--red);
+    transition: background 0.2s ease;
+  }
+  .nav-cta:hover { background: var(--red-deep); border-color: var(--red-deep); }
+
+  /* ——— HERO ——— */
+  .hero {
+    height: 92vh; min-height: 760px;
+    position: relative; color: var(--linen); overflow: hidden; background: var(--ink);
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(180deg, rgba(31,37,33,0.25) 0%, rgba(31,37,33,0.45) 55%, rgba(31,37,33,0.82) 100%),
+      url('hero-villa.webp') center 65% / cover no-repeat;
+  }
+  .hero-bg::after {
+    content: ""; position: absolute; inset: 0;
+    background-image: radial-gradient(ellipse at 30% 80%, rgba(0,0,0,0.45), transparent 60%);
+  }
+  .hero-inner {
+    position: relative; max-width: var(--max); margin: 0 auto;
+    padding: 0 var(--gutter) 96px; height: 100%;
+    display: flex; flex-direction: column; justify-content: flex-end;
+  }
+  .hero-eyebrow {
+    font-family: var(--sans); font-size: 13px;
+    letter-spacing: 0.32em; text-transform: uppercase;
+    color: rgba(245,239,221,0.85); margin-bottom: 28px;
+  }
+  .hero h1 {
+    font-family: var(--display); font-size: clamp(72px, 9vw, 132px);
+    line-height: 0.95; letter-spacing: 0.01em; text-transform: uppercase;
+    color: var(--linen); margin: 0;
+  }
+  .hero h1 .accent { color: var(--red); font-style: normal; }
+  .hero .lede {
+    font-family: var(--serif); font-style: italic; font-size: 28px;
+    line-height: 1.35; color: rgba(245,239,221,0.85); max-width: 32ch; margin: 32px 0 0;
+  }
+  .hero-bottom {
+    margin-top: 56px; display: flex; align-items: center;
+    justify-content: space-between; gap: 40px; flex-wrap: wrap;
+  }
+  .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+  .hero-meta {
+    display: flex; gap: 56px; flex-wrap: wrap;
+    font-family: var(--sans); font-size: 11px;
+    letter-spacing: 0.28em; text-transform: uppercase;
+    color: rgba(245,239,221,0.7);
+  }
+  .hero-meta .val { display: block; font-family: var(--display); font-size: 28px; letter-spacing: 0.04em; color: var(--linen); margin-bottom: 6px; }
+
+  /* Guest Favourite badge */
+  .gf-badge { display: flex; align-items: center; gap: 6px; color: var(--linen); }
+  .gf-laurel { width: 22px; height: 52px; color: var(--linen); flex: 0 0 22px; }
+  .gf-text { display: flex; flex-direction: column; align-items: center; gap: 4px; line-height: 1; }
+  .gf-title { font-family: var(--display); font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase; text-align: center; line-height: 1.1; color: var(--linen); }
+  .gf-sub { font-family: var(--sans); font-size: 9px; letter-spacing: 0.32em; text-transform: uppercase; color: rgba(245,239,221,0.65); }
+
+  /* ——— USP ——— */
+  .usp { background: var(--linen); }
+  .usp-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 64px; margin-top: 80px; }
+  .usp-card { border-top: 1px solid var(--rule); padding-top: 32px; }
+  .usp-card .num { font-family: var(--sans); font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--larch); margin-bottom: 24px; }
+  .usp-card h3 { font-size: 44px; line-height: 1.0; text-transform: uppercase; color: var(--red); margin-bottom: 20px; }
+  .usp-card p { font-size: 18px; color: var(--bark); margin: 0; }
+
+  /* ——— ABOUT ——— */
+  .about { background: var(--linen); border-top: 1px solid var(--rule-light); }
+  .about-inner { display: grid; grid-template-columns: 1.05fr 1fr; gap: 96px; align-items: center; }
+  .about h2 { font-size: 64px; line-height: 1.0; text-transform: uppercase; margin-bottom: 32px; }
+  .about p { font-family: var(--serif); font-size: 20px; line-height: 1.55; color: var(--bark); margin: 0 0 20px; }
+  .about .accent { color: var(--red); font-style: italic; font-size: 22px; }
+  .about-stats {
+    margin-top: 40px; display: grid; grid-template-columns: repeat(4,1fr); gap: 24px;
+    border-top: 1px solid var(--rule-light); padding-top: 32px;
+  }
+  .about-stats .stat .num { font-family: var(--display); font-size: 40px; color: var(--red); line-height: 1; }
+  .about-stats .stat .lbl { font-family: var(--sans); font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--larch); margin-top: 8px; display: block; }
+  .about-image { aspect-ratio: 1420/1324; position: relative; background: #EFE5D2; border: 1px solid var(--rule); overflow: hidden; }
+  .about-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .about .badge {
+    position: absolute; bottom: -28px; right: -28px;
+    width: 168px; height: 168px; border-radius: 50%;
+    background: var(--red); color: var(--linen);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    font-family: var(--display); font-size: 12px;
+    letter-spacing: 0.28em; text-transform: uppercase; text-align: center; line-height: 1.4;
+    box-shadow: 0 12px 32px -8px rgba(169,29,42,0.4);
+  }
+  .about .badge .year { font-size: 36px; letter-spacing: 0.04em; margin: 4px 0; }
+
+  /* ——— GALLERY ——— */
+  .gallery { background: var(--linen); }
+  .gallery-grid { display: grid; grid-template-columns: repeat(12,1fr); gap: 16px; grid-auto-rows: 120px; }
+  .gallery-grid .g { overflow: hidden; }
+  .g-1 { grid-column: 1/8;  grid-row: 1/5; }
+  .g-2 { grid-column: 8/13; grid-row: 1/3; }
+  .g-3 { grid-column: 8/13; grid-row: 3/5; }
+  .g-4 { grid-column: 1/5;  grid-row: 5/8; }
+  .g-5 { grid-column: 5/9;  grid-row: 5/8; }
+  .g-6 { grid-column: 9/13; grid-row: 5/8; }
+  .gallery-cta { text-align: center; margin-top: 56px; }
+
+  /* image placeholder */
+  .placeholder {
+    background: repeating-linear-gradient(135deg, rgba(31,37,33,0.06) 0 8px, rgba(31,37,33,0) 8px 18px), var(--mist);
+    border: 1px solid var(--rule-light);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--bark); font-family: var(--sans); font-size: 11px;
+    letter-spacing: 0.28em; text-transform: uppercase; text-align: center; padding: 24px;
+  }
+  .placeholder.dark {
+    background: repeating-linear-gradient(135deg, rgba(245,239,221,0.10) 0 8px, rgba(245,239,221,0) 8px 18px), var(--bark);
+    color: var(--mist); border-color: rgba(245,239,221,0.18);
+  }
+
+  /* ——— AMENITIES ——— */
+  .amenities { background: var(--ink); color: var(--linen); position: relative; overflow: hidden; }
+  .amenities .section-head h2 { color: var(--linen); }
+  .amenities .section-head .lede { color: var(--mist); }
+  .amenities .eyebrow { color: var(--mist); }
+  .amenities-grid {
+    display: grid; grid-template-columns: repeat(4,1fr);
+    gap: 1px; background: rgba(245,239,221,0.18); border: 1px solid rgba(245,239,221,0.18);
+  }
+  .am-item { background: var(--ink); padding: 40px 32px; min-height: 200px; display: flex; flex-direction: column; gap: 16px; }
+  .am-item .icon { width: 32px; height: 32px; color: var(--red); }
+  .am-item h4 { font-family: var(--display); font-size: 22px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--linen); margin: 12px 0 0; }
+  .am-item p { font-family: var(--serif); font-size: 16px; color: var(--mist); margin: 0; line-height: 1.5; }
+  /* watermark rosette behind amenities */
+  .amenities::before {
+    content: ""; position: absolute; top: -200px; right: -200px; width: 700px; height: 700px;
+    background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg' viewBox%3D'0 0 169.99 169.99'%3E%3Cg fill%3D'%2523A91D2A' opacity%3D'0.18'%3E%3Cpath d%3D'M152.58%2C123.64c6.53-11.36%2C10.29-24.5%2C10.29-38.52s-3.76-27.16-10.29-38.52c-.03-.08-.05-.16-.09-.23-.04-.07-.1-.13-.15-.19C138.89%2C23.15%2C113.92%2C7.62%2C85.37%2C7.62S31.86%2C23.15%2C18.41%2C46.18c-.05.06-.11.12-.15.19-.04.07-.06.15-.09.23-6.54%2C11.36-10.29%2C24.5-10.29%2C38.52s3.76%2C27.16%2C10.29%2C38.52c.03.08.05.16.09.23.05.08.11.15.17.22%2C13.45%2C23.02%2C38.41%2C38.53%2C66.94%2C38.53s53.49-15.51%2C66.94-38.53c.06-.07.12-.14.17-.22.04-.07.06-.15.09-.23Z'%2F%3E%3Cpath d%3D'M85%2C0C38.13%2C0%2C0%2C38.13%2C0%2C85s38.13%2C85%2C85%2C85%2C85-38.13%2C85-85S131.86%2C0%2C85%2C0ZM85%2C167.48c-45.48%2C0-82.49-37-82.49-82.49S39.51%2C2.51%2C85%2C2.51s82.49%2C37%2C82.49%2C82.49-37%2C82.49-82.49%2C82.49Z'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+    background-size: contain; background-repeat: no-repeat; pointer-events: none;
+  }
+
+  /* ——— LOCATION ——— */
+  .location { background: var(--linen); }
+  .location-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 80px; align-items: start; }
+  .location-grid > * { min-width: 0; }
+  .map { aspect-ratio: 4/5; width: 100%; position: relative; overflow: hidden; border: 1px solid var(--rule-light); }
+  .map iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .nearby h3 { font-size: 40px; line-height: 1.0; text-transform: uppercase; margin-bottom: 24px; }
+  .nearby p.lede { font-family: var(--serif); font-style: italic; font-size: 20px; color: var(--bark); margin: 0 0 32px; }
+  .nearby-list { list-style: none; margin: 0; padding: 0; }
+  .nearby-list li { display: grid; grid-template-columns: 24px 1fr auto; gap: 16px; align-items: baseline; padding: 18px 0; border-bottom: 1px solid var(--rule-light); }
+  .nearby-list .marker { width: 10px; height: 10px; border-radius: 50%; transform: translateY(4px); }
+  .nearby-list .name { font-family: var(--display); font-size: 22px; letter-spacing: 0.02em; text-transform: uppercase; }
+  .nearby-list .name small { display: block; font-family: var(--serif); font-style: italic; font-size: 16px; color: var(--bark); letter-spacing: 0; text-transform: none; margin-top: 4px; }
+  .nearby-list .dist { font-family: var(--sans); font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--larch); }
+
+  /* ——— ACTIVITIES ——— */
+  .activities { background: var(--linen); border-top: 1px solid var(--rule-light); }
+  .activities-toggle { display: inline-flex; border: 1px solid var(--ink); margin: 32px auto 0; padding: 4px; gap: 4px; }
+  .activities-toggle button { font-family: var(--sans); font-size: 13px; letter-spacing: 0.28em; text-transform: uppercase; padding: 14px 32px; border: none; background: transparent; color: var(--ink); transition: all 0.2s ease; }
+  .activities-toggle button.active { background: var(--ink); color: var(--linen); }
+  .activities-toggle button:hover:not(.active) { background: rgba(31,37,33,0.06); }
+  .activities-content { margin-top: 64px; display: grid; grid-template-columns: 1.1fr 1fr; gap: 80px; align-items: start; }
+  .activities-image { aspect-ratio: 4/5; }
+  .activities-list { list-style: none; margin: 0; padding: 0; }
+  .activities-list li { display: grid; grid-template-columns: 64px 1fr; gap: 24px; padding: 28px 0; border-bottom: 1px solid var(--rule-light); align-items: start; }
+  .activities-list li:first-child { border-top: 1px solid var(--rule-light); }
+  .activities-list .idx { font-family: var(--sans); font-size: 11px; letter-spacing: 0.32em; color: var(--larch); text-transform: uppercase; padding-top: 8px; }
+  .activities-list .title { font-family: var(--display); font-size: 26px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 8px; }
+  .activities-list .desc { font-family: var(--serif); font-size: 17px; color: var(--bark); margin: 0; }
+  .activities-list .meta { font-family: var(--sans); font-size: 11px; letter-spacing: 0.28em; color: var(--red); text-transform: uppercase; margin-top: 10px; display: inline-block; }
+
+  /* ——— REVIEWS ——— */
+  .reviews { background: var(--bark); color: var(--linen); }
+  .reviews .section-head h2 { color: var(--linen); }
+  .reviews .section-head .lede { color: var(--mist); }
+  .reviews .eyebrow { color: var(--mist); }
+  .reviews-stats { display: flex; justify-content: center; gap: 80px; margin: 24px 0 80px; flex-wrap: wrap; }
+  .reviews-stats .stat { text-align: center; }
+  .reviews-stats .stat .num { font-family: var(--display); font-size: 56px; color: var(--linen); line-height: 1; }
+  .reviews-stats .stat .num .of { font-size: 28px; color: var(--mist); }
+  .reviews-gf { transform: scale(1.35); transform-origin: center; margin: 0 24px; }
+  .reviews-stats .stat .lbl { font-family: var(--sans); font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--mist); margin-top: 10px; display: block; }
+  .reviews-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 32px; }
+  .review { background: rgba(245,239,221,0.05); border: 1px solid rgba(245,239,221,0.15); padding: 40px 36px; display: flex; flex-direction: column; gap: 24px; }
+  .review .stars { color: var(--red); font-size: 16px; letter-spacing: 6px; }
+  .review .quote { font-family: var(--serif); font-style: italic; font-size: 20px; line-height: 1.5; color: var(--linen); margin: 0; }
+  .review .quote::before { content: "\201C"; font-size: 36px; color: var(--red); vertical-align: -10px; margin-right: 4px; line-height: 0; }
+  .review-author { margin-top: auto; padding-top: 24px; border-top: 1px solid rgba(245,239,221,0.18); display: flex; justify-content: space-between; align-items: baseline; }
+  .review-author .name { font-family: var(--display); font-size: 18px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--linen); }
+  .review-author .where { font-family: var(--sans); font-size: 10px; letter-spacing: 0.26em; text-transform: uppercase; color: var(--mist); }
+  .review-source { font-family: var(--sans); font-size: 10px; letter-spacing: 0.26em; text-transform: uppercase; color: var(--larch); }
+
+  /* ——— FAQ ——— */
+  .faq { background: var(--linen); }
+  .faq-inner { max-width: 900px; margin: 0 auto; }
+  .faq-item { border-bottom: 1px solid var(--rule); }
+  .faq-q { width: 100%; background: transparent; border: none; text-align: left; padding: 32px 0; display: flex; justify-content: space-between; align-items: center; gap: 24px; font-family: var(--display); font-size: 26px; letter-spacing: 0.02em; text-transform: uppercase; color: var(--ink); cursor: pointer; transition: color 0.15s ease; }
+  .faq-q:hover { color: var(--red); }
+  .faq-q .toggle { width: 36px; height: 36px; border: 1px solid var(--rule); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--ink); font-family: var(--sans); font-weight: 300; font-size: 22px; line-height: 0; flex: 0 0 36px; transition: all 0.2s ease; }
+  .faq-item.open .faq-q .toggle { background: var(--red); color: var(--linen); border-color: var(--red); transform: rotate(45deg); }
+  .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease; font-family: var(--serif); font-size: 19px; color: var(--bark); line-height: 1.55; padding: 0 64px 0 0; }
+  .faq-item.open .faq-a { max-height: 400px; padding-bottom: 32px; }
+
+  /* ——— CONTACT ——— */
+  .contact { background: var(--red); color: var(--linen); position: relative; overflow: hidden; }
+  .contact .eyebrow { color: rgba(245,239,221,0.7); }
+  .contact h2 { color: var(--linen); font-size: 72px; line-height: 0.98; text-transform: uppercase; max-width: 14ch; }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 96px; align-items: start; }
+  .contact-left p.lede { font-family: var(--serif); font-style: italic; font-size: 22px; color: rgba(245,239,221,0.85); margin: 32px 0 48px; max-width: 36ch; }
+  .contact-info { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 28px; }
+  .contact-info li { border-top: 1px solid rgba(245,239,221,0.25); padding-top: 16px; }
+  .contact-info .lbl { font-family: var(--sans); font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(245,239,221,0.65); }
+  .contact-info .val { font-family: var(--display); font-size: 22px; letter-spacing: 0.04em; text-transform: uppercase; margin-top: 4px; }
+
+  /* contact form */
+  .form { background: var(--linen); color: var(--ink); padding: 56px 56px 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 28px 24px; }
+  .form .full { grid-column: 1/3; }
+  .form label { display: block; font-family: var(--sans); font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--larch); margin-bottom: 10px; }
+  .form input, .form select, .form textarea { width: 100%; background: transparent; border: none; border-bottom: 1px solid var(--rule); padding: 8px 0 12px; font-family: var(--serif); font-size: 18px; color: var(--ink); outline: none; transition: border-color 0.2s ease; }
+  .form input:focus, .form select:focus, .form textarea:focus { border-bottom-color: var(--red); }
+  .form textarea { resize: vertical; min-height: 80px; }
+  .form .submit-row { grid-column: 1/3; margin-top: 12px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+  .form .submit-row .note { font-family: var(--sans); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--larch); }
+
+  /* GDPR consent */
+  .consent-wrap { position: relative; }
+  .consent-label { display: flex; align-items: flex-start; gap: 14px; cursor: pointer; }
+  .consent-label input[type="checkbox"] { position: absolute; opacity: 0; width: 0; height: 0; }
+  .consent-box { flex-shrink: 0; width: 18px; height: 18px; border: 1px solid var(--rule); background: transparent; margin-top: 3px; transition: all 0.15s; display: flex; align-items: center; justify-content: center; }
+  .consent-label input:checked ~ .consent-box { background: var(--red); border-color: var(--red); }
+  .consent-label input:checked ~ .consent-box::after { content: ''; display: block; width: 5px; height: 9px; border: 1.5px solid var(--linen); border-top: none; border-left: none; transform: rotate(45deg) translateY(-1px); }
+  .consent-text { font-family: var(--serif); font-size: 15px; color: var(--bark); line-height: 1.4; }
+  .consent-text a { color: var(--ink); border-bottom: 1px solid var(--rule); }
+  .consent-error { font-family: var(--sans); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-top: 8px; display: none; padding-left: 32px; }
+  .consent-wrap.error .consent-box { border-color: var(--red); }
+  .consent-wrap.error .consent-error { display: block; }
+
+  /* form success/error states */
+  .form-success { display: none; padding: 80px 56px; text-align: center; background: var(--linen); }
+  .form-success.visible { display: block; }
+  .form-success h3 { font-size: 36px; text-transform: uppercase; color: var(--ink); margin-bottom: 16px; }
+  .form-success p { font-family: var(--serif); font-size: 20px; color: var(--bark); font-style: italic; }
+  .form-error-msg { display: none; font-family: var(--sans); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-top: 8px; }
+  .form-error-msg.visible { display: block; }
+
+  /* watermark on contact */
+  .contact::before {
+    content: ""; position: absolute; bottom: -300px; left: -250px; width: 800px; height: 800px;
+    background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg' viewBox%3D'0 0 169.99 169.99'%3E%3Cg fill%3D'%2523F5EFDD' opacity%3D'0.10'%3E%3Cpath d%3D'M85%2C0C38.13%2C0%2C0%2C38.13%2C0%2C85s38.13%2C85%2C85%2C85%2C85-38.13%2C85-85S131.86%2C0%2C85%2C0ZM85%2C167.48c-45.48%2C0-82.49-37-82.49-82.49S39.51%2C2.51%2C85%2C2.51s82.49%2C37%2C82.49%2C82.49-37%2C82.49-82.49%2C82.49Z'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+    background-size: contain; background-repeat: no-repeat; pointer-events: none;
+  }
+
+  /* ——— FOOTER ——— */
+  .footer { background: var(--ink); color: var(--mist); padding: 80px 0 36px; }
+  .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 64px; margin-bottom: 56px; }
+  .footer h4 { font-family: var(--sans); font-size: 11px; font-weight: 500; letter-spacing: 0.28em; text-transform: uppercase; color: var(--linen); margin: 0 0 24px; }
+  .footer-brand .mark { color: var(--linen); margin-bottom: 12px; line-height: 0; }
+  .footer-brand .footer-mark { display: block; width: 220px; height: auto; }
+  .footer-brand .est { font-family: var(--sans); font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--larch); margin-bottom: 24px; }
+  .footer-brand p { font-family: var(--serif); font-style: italic; font-size: 17px; color: var(--mist); max-width: 32ch; margin: 0; }
+  .footer ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; font-family: var(--serif); font-size: 16px; }
+  .footer ul a { color: var(--mist); transition: color 0.15s ease; }
+  .footer ul a:hover { color: var(--linen); }
+  .footer-bottom { border-top: 1px solid rgba(245,239,221,0.18); padding-top: 28px; display: flex; justify-content: space-between; align-items: center; font-family: var(--sans); font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--larch); flex-wrap: wrap; gap: 16px; }
+  .footer-bottom .legal { display: flex; gap: 24px; }
+  .footer-rosette { width: 32px; height: 32px; color: var(--red); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-brand" aria-label="Willa Maciejówka — Home">
+      <svg viewBox="0 0 169.99 169.99" aria-hidden="true">
+        <g fill="currentColor">
+          <path d="M152.58,123.64c6.53-11.36,10.29-24.5,10.29-38.52s-3.76-27.16-10.29-38.52c-.03-.08-.05-.16-.09-.23-.04-.07-.1-.13-.15-.19C138.89,23.15,113.92,7.62,85.37,7.62S31.86,23.15,18.41,46.18c-.05.06-.11.12-.15.19-.04.07-.06.15-.09.23-6.54,11.36-10.29,24.5-10.29,38.52s3.76,27.16,10.29,38.52c.03.08.05.16.09.23.05.08.11.15.17.22,13.45,23.02,38.41,38.53,66.94,38.53s53.49-15.51,66.94-38.53c.06-.07.12-.14.17-.22.04-.07.06-.15.09-.23ZM92.09,87.56c21.01,3.78,40.06,14.78,53.84,31.09l-53.84-31.09ZM145.85,51.69c-13.78,16.26-32.81,27.23-53.78,30.99l53.78-30.99ZM90.86,80.5c13.8-16.33,32.9-27.34,53.95-31.09l-53.95,31.09ZM86.62,78.08V15.91c7.23,20.08,7.23,42.09,0,62.17ZM84.13,15.91v62.18c-7.23-20.09-7.23-42.09,0-62.18ZM26.07,49.43c21.01,3.78,40.06,14.78,53.84,31.09l-53.84-31.09ZM78.66,82.68c-21.01-3.78-40.07-14.78-53.84-31.09l53.84,31.09ZM24.95,118.48c13.75-16.2,32.73-27.14,53.65-30.92l-53.65,30.92ZM79.95,89.67c-13.83,16.38-32.98,27.42-54.09,31.17l54.09-31.17ZM84.13,92.15v62.18c-7.23-20.09-7.23-42.09,0-62.18ZM86.62,154.33v-62.17c7.23,20.08,7.23,42.09,0,62.17ZM144.68,120.8c-21.01-3.78-40.07-14.78-53.84-31.09l53.84,31.09ZM92.72,85.12c21.65-3.94,41.27-15.34,55.41-32.22-7.48,20.88-7.43,43.8.17,64.65-14.15-17-33.84-28.47-55.58-32.42ZM89.05,78.76c7.34-20.53,7.34-42.99,0-63.51,14.08,16.54,33.46,27.78,54.81,31.8-21.37,3.94-40.75,15.15-54.81,31.72ZM81.7,78.76c-13.97-16.46-33.17-27.63-54.37-31.64,21.33-4.24,40.64-15.7,54.57-32.44-7.55,20.68-7.61,43.37-.19,64.08ZM78.03,85.12c-21.12,3.84-40.29,14.79-54.34,30.99,6.91-20.14,6.85-42.08-.17-62.19,14.06,16.31,33.31,27.34,54.52,31.19ZM81.7,91.48c-7.36,20.56-7.35,43.06.04,63.62-14.09-16.59-33.49-27.86-54.87-31.9,21.38-3.93,40.77-15.14,54.84-31.72ZM89.05,91.48c13.96,16.45,33.16,27.62,54.34,31.63-21.29,4.23-40.57,15.65-54.5,32.34,7.51-20.65,7.56-43.29.16-63.97ZM151.81,119.84l-1.08-2.93c-7.56-20.58-7.57-43.25-.02-63.84l1.03-2.81c5.49,10.42,8.62,22.27,8.62,34.85s-3.1,24.33-8.56,34.72ZM148.95,45.42l-3.47-.61c-21.6-3.78-41.21-15.14-55.23-32l-2.17-2.6c25.65.91,48.05,14.76,60.87,35.22ZM82.36,10.21l-2.24,2.71c-13.98,16.89-33.57,28.3-55.16,32.13l-3.29.58C34.41,25.14,56.75,11.23,82.36,10.21ZM19.32,49.66l1.35,3.66c7.56,20.58,7.57,43.25.02,63.84l-1.3,3.54c-5.74-10.59-9-22.71-9-35.58s3.24-24.89,8.93-35.45ZM21.81,124.83l3.41.6c21.6,3.78,41.21,15.15,55.23,32l2.17,2.6c-25.62-.93-47.99-14.77-60.81-35.2ZM88.34,160.03l2.24-2.71c13.98-16.89,33.57-28.3,55.16-32.13l3.35-.59c-12.75,20.51-35.12,34.43-60.75,35.43Z"/>
+          <path d="M85,0C38.13,0,0,38.13,0,85s38.13,85,85,85,85-38.13,85-85S131.86,0,85,0ZM85,167.48c-45.48,0-82.49-37-82.49-82.49S39.51,2.51,85,2.51s82.49,37,82.49,82.49-37,82.49-82.49,82.49Z"/>
+        </g>
+      </svg>
+    </a>
+
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#about">Villa</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#amenities">Amenities</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#activities">Activities</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+      </ul>
+
+      <div class="nav-lang" tabindex="0">
+        <button class="nav-lang-trigger" type="button" aria-haspopup="listbox" aria-expanded="false">
+          <span class="lang-code">EN</span>
+          <svg viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1 L5 5 L9 1" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+        <ul class="nav-lang-menu" role="listbox">
+          <li role="option" aria-selected="true" data-lang="EN">English</li>
+          <li role="option" data-lang="PL">Polski</li>
+        </ul>
+      </div>
+
+      <a href="#contact" class="nav-cta">Book Now</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <h1>Witaj<br>w&nbsp;<span class="accent">domu.</span></h1>
+    <p class="lede">Discover a century-old villa in the heart of Zakopane — steps from Krupówki, in a peaceful residential street. Perfect for families and groups of friends.</p>
+    <div class="hero-bottom">
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-red">Book Now <span class="arrow">→</span></a>
+        <a href="#gallery" class="btn" style="color:var(--linen);border-color:rgba(245,239,221,0.45);">View the House</a>
+      </div>
+      <div class="hero-meta">
+        <div><span class="val">9</span>Guests</div>
+        <div><span class="val">4</span>Bedrooms</div>
+        <div><span class="val">3</span>Bathrooms</div>
+        <div class="gf-badge" aria-label="Guest Favourite — Airbnb">
+          <svg class="gf-laurel" viewBox="0 0 24 56" fill="none" aria-hidden="true">
+            <path d="M14 2 C14 12,14 22,14 32 C14 42,14 50,14 54" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            <path d="M14 8 C10 8,6 6,4 4 C6 7,9 10,13 11" fill="currentColor"/>
+            <path d="M14 16 C10 16,6 14,4 12 C6 15,9 18,13 19" fill="currentColor"/>
+            <path d="M14 24 C10 24,6 22,4 20 C6 23,9 26,13 27" fill="currentColor"/>
+            <path d="M14 32 C10 32,6 30,4 28 C6 31,9 34,13 35" fill="currentColor"/>
+            <path d="M14 40 C10 40,6 38,4 36 C6 39,9 42,13 43" fill="currentColor"/>
+            <path d="M14 48 C10 48,6 46,4 44 C6 47,9 50,13 51" fill="currentColor"/>
+          </svg>
+          <div class="gf-text">
+            <span class="gf-title">Guest<br>Favourite</span>
+            <span class="gf-sub">Airbnb · 2026</span>
+          </div>
+          <svg class="gf-laurel" viewBox="0 0 24 56" fill="none" aria-hidden="true">
+            <path d="M10 2 C10 12,10 22,10 32 C10 42,10 50,10 54" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            <path d="M10 8 C14 8,18 6,20 4 C18 7,15 10,11 11" fill="currentColor"/>
+            <path d="M10 16 C14 16,18 14,20 12 C18 15,15 18,11 19" fill="currentColor"/>
+            <path d="M10 24 C14 24,18 22,20 20 C18 23,15 26,11 27" fill="currentColor"/>
+            <path d="M10 32 C14 32,18 30,20 28 C18 31,15 34,11 35" fill="currentColor"/>
+            <path d="M10 40 C14 40,18 38,20 36 C18 39,15 42,11 43" fill="currentColor"/>
+            <path d="M10 48 C14 48,18 46,20 44 C18 47,15 50,11 51" fill="currentColor"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- USP -->
+<section class="section usp" id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">— Why Maciejówka —</span>
+      <h2>Three reasons<br>guests return.</h2>
+      <p class="lede">A listed monument, a prime central street, and the quiet hospitality of a hundred-year-old house.</p>
+    </div>
+    <div class="usp-grid">
+      <div class="usp-card">
+        <div class="num">— I —</div>
+        <h3>Listed<br>Monument</h3>
+        <p>One of Zakopane's last hand-notched larch-log villas, on Poland's National Register of Monuments. Folk-carved gables, original beams, restored with care.</p>
+      </div>
+      <div class="usp-card">
+        <div class="num">— II —</div>
+        <h3>Prime<br>Central<br>Location</h3>
+        <p>A four-minute walk to Krupówki and Rówień Krupowa, yet ul. Sienkiewicza stays peacefully still after dark. The promenade by day, the mountain hush by night.</p>
+      </div>
+      <div class="usp-card">
+        <div class="num">— III —</div>
+        <h3>A House<br>for Nine</h3>
+        <p>Four bedrooms, a conservatory dining table, a sunny kitchen, a private garden. Ideal for two families travelling together, or one slow-moving group. Dogs welcome.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section about">
+  <div class="wrap">
+    <div class="about-inner">
+      <div>
+        <span class="eyebrow">— Willa Maciejówka —</span>
+        <h2 style="margin-top:18px;">A larch-log house,<br>standing since 1901.</h2>
+        <p>Built in 1901 and hand-notched by Góral craftsmen, Willa Maciejówka has been carefully restored and fitted with every modern comfort while preserving its historic character.</p>
+        <p>The ground floor opens to a spacious hall, two bedrooms with double beds, a full bathroom, and a fully-equipped kitchen that flows into a sunny conservatory — the heart of every family gathering.</p>
+        <p>Upstairs, a cosy living room and two more bedrooms continue the villa's folk-art character, both featuring traditional triangular windows that flood the rooms with mountain light.</p>
+        <p class="accent">Four bedrooms · nine guests · private garden · dogs welcome.</p>
+        <div class="about-stats">
+          <div class="stat"><div class="num">4</div><span class="lbl">Bedrooms</span></div>
+          <div class="stat"><div class="num">3</div><span class="lbl">Bathrooms</span></div>
+          <div class="stat"><div class="num">220m²</div><span class="lbl">Interior</span></div>
+          <div class="stat"><div class="num">★ 4.95</div><span class="lbl">Guest Rating</span></div>
+        </div>
+      </div>
+      <div style="position:relative;">
+        <div class="about-image">
+          <img src="archive-card.png" alt="Willa Maciejówka — 1979 National Centre heritage registration card">
+        </div>
+        <div class="badge">
+          <span>Listed</span>
+          <span class="year">1901</span>
+          <span>Monument</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section gallery" id="gallery">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">— Look Inside —</span>
+      <h2>The house,<br>room by room.</h2>
+      <p class="lede">Conservatory breakfasts, larch-beamed bedrooms, and a garden that opens onto the Tatras.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="g g-1 placeholder"><span>Exterior · winter dusk · hero</span></div>
+      <div class="g g-2 placeholder"><span>Conservatory · dining table</span></div>
+      <div class="g g-3 placeholder"><span>Triangular window · larch detail</span></div>
+      <div class="g g-4 placeholder"><span>Master bedroom · en-suite</span></div>
+      <div class="g g-5 placeholder"><span>Living room · upstairs</span></div>
+      <div class="g g-6 placeholder"><span>Garden · summer evening</span></div>
+    </div>
+    <div class="gallery-cta">
+      <a href="#" class="btn">View All Photographs <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- AMENITIES -->
+<section class="section amenities" id="amenities">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">— What's Inside —</span>
+      <h2>Quiet comfort,<br>quietly delivered.</h2>
+      <p class="lede">Every modern convenience, carefully tucked inside the original 1901 structure.</p>
+    </div>
+    <div class="amenities-grid">
+      <div class="am-item">
+        <svg class="icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 18L16 6l12 12"/><path d="M7 16v10h18V16"/><path d="M13 26v-7h6v7"/></svg>
+        <h4>Private Garden</h4>
+        <p>Fenced lawn with seating, fire bowl, and Tatra views.</p>
+      </div>
+      <div class="am-item">
+        <svg class="icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 8h20v18H6z"/><path d="M6 14h20"/><circle cx="11" cy="11" r="1.2" fill="currentColor"/><circle cx="16" cy="11" r="1.2" fill="currentColor"/></svg>
+        <h4>Large Kitchen</h4>
+        <p>Fully-equipped with coffee machine, dishwasher, and everything you need.</p>
+      </div>
+      <div class="am-item">
+        <svg class="icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 10L16 4l10 6V26H6z"/><path d="M14 26v-8h4v8"/></svg>
+        <h4>Conservatory Dining</h4>
+        <p>A sun-drenched space where every meal feels like an occasion.</p>
+      </div>
+      <div class="am-item">
+        <svg class="icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="16" cy="16" r="11"/><path d="M16 5v22M5 16h22"/></svg>
+        <h4>Fast Wi-Fi</h4>
+        <p>Available throughout the entire villa.</p>
+      </div>
+      <div class="am-item">
+        <svg class="icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 22V10a4 4 0 014-4h12a4 4 0 014 4v12"/><path d="M4 22h24v4H4z"/><path d="M11 14h10"/></svg>
+        <h4>Linen &amp; Towels</h4>
+        <p>Pressed cotton linen, oversized towels, hotel pillows. Cosmetics included.</p>
+      </div>
+      <div class="am-item">
+        <svg class="icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="16" cy="14" r="6"/><path d="M22 20L26 28 20 25l-4 5-4-5-6 3 4-8"/></svg>
+        <h4>Dogs Welcome</h4>
+        <p>Garden-fenced, beds provided, no extra fee.</p>
+      </div>
+      <div class="am-item">
+        <svg class="icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 6h16v20H8z"/><path d="M12 11h8M12 16h8M12 21h5"/></svg>
+        <h4>Concierge Book</h4>
+        <p>Personally curated guide to Zakopane, by your host.</p>
+      </div>
+      <div class="am-item">
+        <svg class="icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="9" width="22" height="14"/><circle cx="11" cy="23" r="2.5"/><circle cx="21" cy="23" r="2.5"/></svg>
+        <h4>Private Parking</h4>
+        <p>Park up to three cars on-site, at no extra charge.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="section location" id="location">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">— Where We Are —</span>
+      <h2>Four minutes<br>to Krupówki.</h2>
+      <p class="lede">Central enough for everything. Quiet enough to forget the rest of town exists.</p>
+    </div>
+    <div class="location-grid">
+      <div class="map">
+        <iframe
+          src="https://maps.google.com/maps?q=Sienkiewicza+18,+Zakopane,+Poland&output=embed&hl=en&z=16"
+          loading="lazy"
+          title="Willa Maciejówka on Google Maps"
+          allowfullscreen></iframe>
+      </div>
+      <div class="nearby">
+        <span class="eyebrow">— What's Nearby —</span>
+        <h3 style="margin-top:18px;">Five minutes,<br>everywhere worth going.</h3>
+        <p class="lede">Restaurants, ski lifts, and the promenade — all walkable from the front gate.</p>
+        <ul class="nearby-list">
+          <li>
+            <span class="marker" style="background:var(--red);"></span>
+            <span class="name">Krupówki Promenade <small>The main pedestrian street — shops, oscypek, terraces</small></span>
+            <span class="dist">5 min walk</span>
+          </li>
+          <li>
+            <span class="marker" style="background:var(--red);"></span>
+            <span class="name">Gubałówka Funicular <small>Three minutes to the ridgeline — panoramic Tatra views</small></span>
+            <span class="dist">10 min walk</span>
+          </li>
+          <li>
+            <span class="marker" style="background:var(--red);"></span>
+            <span class="name">Zakopane Train Station <small>PKP connections to Kraków and Warsaw</small></span>
+            <span class="dist">15 min walk</span>
+          </li>
+          <li>
+            <span class="marker" style="background:var(--red);"></span>
+            <span class="name">Termy Zakopane <small>Geothermal pools, outdoor in all weathers</small></span>
+            <span class="dist">8 min drive</span>
+          </li>
+          <li>
+            <span class="marker" style="background:var(--red);"></span>
+            <span class="name">Polana Szymoszkowa <small>Family-friendly ski resort, equipment rental on-site</small></span>
+            <span class="dist">10 min drive</span>
+          </li>
+          <li>
+            <span class="marker" style="background:var(--red);"></span>
+            <span class="name">Kasprowy Wierch Gondola <small>To the top of Mt. Kasprowy Wierch — 1,987 m</small></span>
+            <span class="dist">15 min drive</span>
+          </li>
+          <li>
+            <span class="marker" style="background:var(--red);"></span>
+            <span class="name">Dolina Kościeliska <small>Karst valley trail — flat and beautiful</small></span>
+            <span class="dist">20 min drive</span>
+          </li>
+          <li>
+            <span class="marker" style="background:var(--red);"></span>
+            <span class="name">Morskie Oko Lake <small>The Tatras' most photographed alpine lake</small></span>
+            <span class="dist">25 min drive</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACTIVITIES -->
+<section class="section activities" id="activities">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">— Things to Do —</span>
+      <h2>Two mountains,<br>two seasons.</h2>
+      <p class="lede">Pick your weather. The Tatras meet you where you are.</p>
+      <div class="activities-toggle" role="tablist">
+        <button id="tab-winter" class="active" data-season="winter">— Winter —</button>
+        <button id="tab-summer" data-season="summer">— Summer —</button>
+      </div>
+    </div>
+    <div class="activities-content">
+      <div class="placeholder activities-image" id="season-image">
+        <span id="season-img-label">Tatra ridge in deep snow,<br>warm afternoon light</span>
+      </div>
+      <ul class="activities-list" id="activities-list"></ul>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section reviews" id="reviews">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">— Guest Stories —</span>
+      <h2>A house remembered<br>fondly, by many.</h2>
+    </div>
+    <div class="reviews-stats">
+      <div class="stat"><div class="num">5<span class="of"> / 5</span></div><span class="lbl">Airbnb</span></div>
+      <div class="gf-badge reviews-gf" aria-label="Guest Favourite — Airbnb">
+        <svg class="gf-laurel" viewBox="0 0 24 56" fill="none" aria-hidden="true">
+          <path d="M14 2 C14 12,14 22,14 32 C14 42,14 50,14 54" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          <path d="M14 8 C10 8,6 6,4 4 C6 7,9 10,13 11" fill="currentColor"/>
+          <path d="M14 16 C10 16,6 14,4 12 C6 15,9 18,13 19" fill="currentColor"/>
+          <path d="M14 24 C10 24,6 22,4 20 C6 23,9 26,13 27" fill="currentColor"/>
+          <path d="M14 32 C10 32,6 30,4 28 C6 31,9 34,13 35" fill="currentColor"/>
+          <path d="M14 40 C10 40,6 38,4 36 C6 39,9 42,13 43" fill="currentColor"/>
+          <path d="M14 48 C10 48,6 46,4 44 C6 47,9 50,13 51" fill="currentColor"/>
+        </svg>
+        <div class="gf-text">
+          <span class="gf-title">Guest<br>Favourite</span>
+          <span class="gf-sub">Airbnb · 2026</span>
+        </div>
+        <svg class="gf-laurel" viewBox="0 0 24 56" fill="none" aria-hidden="true">
+          <path d="M10 2 C10 12,10 22,10 32 C10 42,10 50,10 54" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          <path d="M10 8 C14 8,18 6,20 4 C18 7,15 10,11 11" fill="currentColor"/>
+          <path d="M10 16 C14 16,18 14,20 12 C18 15,15 18,11 19" fill="currentColor"/>
+          <path d="M10 24 C14 24,18 22,20 20 C18 23,15 26,11 27" fill="currentColor"/>
+          <path d="M10 32 C14 32,18 30,20 28 C18 31,15 34,11 35" fill="currentColor"/>
+          <path d="M10 40 C14 40,18 38,20 36 C18 39,15 42,11 43" fill="currentColor"/>
+          <path d="M10 48 C14 48,18 46,20 44 C18 47,15 50,11 51" fill="currentColor"/>
+        </svg>
+      </div>
+      <div class="gf-badge reviews-gf" aria-label="Top 10% of homes on Airbnb">
+        <svg class="gf-laurel" viewBox="0 0 24 56" fill="none" aria-hidden="true">
+          <path d="M14 2 C14 12,14 22,14 32 C14 42,14 50,14 54" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          <path d="M14 8 C10 8,6 6,4 4 C6 7,9 10,13 11" fill="currentColor"/>
+          <path d="M14 40 C10 40,6 38,4 36 C6 39,9 42,13 43" fill="currentColor"/>
+          <path d="M14 48 C10 48,6 46,4 44 C6 47,9 50,13 51" fill="currentColor"/>
+        </svg>
+        <div class="gf-text">
+          <span class="gf-title">Top 10%<br>of Homes</span>
+          <span class="gf-sub">Airbnb · 2026</span>
+        </div>
+        <svg class="gf-laurel" viewBox="0 0 24 56" fill="none" aria-hidden="true">
+          <path d="M10 2 C10 12,10 22,10 32 C10 42,10 50,10 54" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          <path d="M10 8 C14 8,18 6,20 4 C18 7,15 10,11 11" fill="currentColor"/>
+          <path d="M10 40 C14 40,18 38,20 36 C18 39,15 42,11 43" fill="currentColor"/>
+          <path d="M10 48 C14 48,18 46,20 44 C18 47,15 50,11 51" fill="currentColor"/>
+        </svg>
+      </div>
+      <div class="stat"><div class="num">10<span class="of"> / 10</span></div><span class="lbl">Booking.com</span></div>
+    </div>
+
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <p class="quote">The most beautiful house we have stayed in. Every detail is considered, and the conservatory at breakfast is something we are still talking about months later.</p>
+        <div class="review-author">
+          <div>
+            <div class="name">Hannah &amp; Mark</div>
+            <div class="where">London · December</div>
+          </div>
+          <div class="review-source">Airbnb</div>
+        </div>
+      </article>
+      <article class="review">
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <p class="quote">A rare find. Quiet, central, and full of soul. The host left a handwritten welcome card and firewood ready in the basket. We will be back.</p>
+        <div class="review-author">
+          <div>
+            <div class="name">Familie Müller</div>
+            <div class="where">Munich · February</div>
+          </div>
+          <div class="review-source">Booking.com</div>
+        </div>
+      </article>
+      <article class="review">
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <p class="quote">We came for skiing and stayed for the house. The triangular windows, the larch beams, the smell of wood in the evening — exactly the Zakopane we hoped for.</p>
+        <div class="review-author">
+          <div>
+            <div class="name">The Anderssons</div>
+            <div class="where">Stockholm · March</div>
+          </div>
+          <div class="review-source">Direct</div>
+        </div>
+      </article>
+    </div>
+
+    <div style="text-align:center;margin-top:56px;">
+      <a href="#" class="btn btn-cream">Read More Reviews <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">— Frequently Asked —</span>
+      <h2>Before you book.</h2>
+    </div>
+    <div class="faq-inner" id="faq-list"></div>
+    <div style="text-align:center;margin-top:56px;">
+      <p style="font-family:var(--serif);font-style:italic;font-size:20px;color:var(--bark);margin:0 0 20px;">A question we haven't answered?</p>
+      <a href="#contact" class="btn">Write to Us <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-left">
+        <span class="eyebrow">— Reserve Your Stay —</span>
+        <h2 style="margin-top:18px;">Witaj.<br>Tell us<br>when.</h2>
+        <p class="lede">Reach out directly and we'll confirm availability within 24 hours — most often the same evening. Direct bookings receive a small welcome from your host on arrival.</p>
+        <ul class="contact-info">
+          <li>
+            <div class="lbl">Reservations</div>
+            <div class="val">+48 500 343 781</div>
+          </li>
+          <li>
+            <div class="lbl">Email</div>
+            <div class="val">maciejowka.willa@gmail.com</div>
+          </li>
+          <li>
+            <div class="lbl">Address</div>
+            <div class="val">ul. Sienkiewicza 18, 34-500 Zakopane</div>
+          </li>
+          <li>
+            <div class="lbl">Check-in · Check-out</div>
+            <div class="val">16:00 · 11:00</div>
+          </li>
+        </ul>
+      </div>
+
+      <div id="form-wrap">
+        <form
+          class="form"
+          id="contactForm"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          novalidate>
+          <input type="hidden" name="form-name" value="contact">
+          <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+
+          <div>
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" required>
+          </div>
+          <div>
+            <label for="lastName">Surname</label>
+            <input type="text" id="lastName" name="lastName" required>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div>
+            <label for="phone">Phone / WhatsApp</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          <div>
+            <label for="checkin">Check-in</label>
+            <input type="date" id="checkin" name="checkin">
+          </div>
+          <div>
+            <label for="checkout">Check-out</label>
+            <input type="date" id="checkout" name="checkout">
+          </div>
+          <div>
+            <label for="guests">Guests</label>
+            <select id="guests" name="guests">
+              <option>1 – 2 guests</option>
+              <option>3 – 4 guests</option>
+              <option>5 – 6 guests</option>
+              <option>7 – 9 guests</option>
+            </select>
+          </div>
+          <div>
+            <label for="dogs">Travelling with a dog?</label>
+            <select id="dogs" name="dogs">
+              <option>No</option>
+              <option>Yes — one</option>
+              <option>Yes — two</option>
+            </select>
+          </div>
+          <div class="full">
+            <label for="message">Anything we should know?</label>
+            <textarea id="message" name="message" rows="2" placeholder="Children's ages, dietary requests, special occasion…"></textarea>
+          </div>
+
+          <div class="full">
+            <div class="consent-wrap" id="consentWrap">
+              <label class="consent-label">
+                <input type="checkbox" id="gdprConsent" name="gdprConsent" required>
+                <span class="consent-box"></span>
+                <span class="consent-text">I agree to my personal data being processed by Willa Maciejówka for the purpose of responding to my enquiry, in accordance with the <a href="#">Privacy Policy</a>. (Required)</span>
+              </label>
+              <p class="consent-error" id="consentError">Please accept the privacy policy to continue.</p>
+            </div>
+          </div>
+
+          <div class="submit-row">
+            <span class="note">Reply within 24 hours · No deposit at this stage</span>
+            <button type="submit" class="btn btn-red" id="submitBtn">
+              <span class="btn-label">Send Enquiry →</span>
+              <span class="btn-loading" hidden>Sending…</span>
+            </button>
+          </div>
+          <div class="full">
+            <p class="form-error-msg" id="formErrorMsg">Something went wrong. Please try again or email us directly.</p>
+          </div>
+        </form>
+
+        <div class="form-success" id="formSuccess">
+          <h3>Message Received</h3>
+          <p>Thank you — we'll reply within 24 hours.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="mark">
+          <svg class="footer-mark" viewBox="0 0 815.39 170.25" fill="currentColor" aria-label="Willa Maciejówka">
+            <path d="M201.04,127.62h3.74l8.15,26.04,2.78-9.14-5.3-16.91h3.73l3.39,10.86,3.33-10.86h1.49l-4.04,13.33,3.97,12.71,7.94-26.04h1.53l-8.69,28.47.75,2.43h-3.73l-3.6-11.57-2.78,9.14.75,2.43h-3.73l-9.68-30.9Z"/>
+            <path d="M248.24,127.62h3.36v30.9h-3.36v-30.9Z"/>
+            <path d="M273.33,156.71h11.24v1.81h-14.63v-30.9h3.4v29.09Z"/>
+            <path d="M305.12,156.71h11.24v1.81h-14.63v-30.9h3.4v29.09Z"/>
+            <path d="M331.13,158.52l7.94-26-1.53-4.9h3.67l9.68,30.9h-3.67l-1.87-6h-10.86l-1.83,6h-1.53ZM335.03,150.7h9.74l-4.92-15.76-4.82,15.76Z"/>
+            <path d="M199.04,22.65h11.15l29.87,77.01,26.68-77.01h7.27v90.6h-9.96V43.49l-24.2,69.76h-5.68l-26.98-69.76v69.76h-4.18V32.88l-3.98-10.22Z"/>
+            <path d="M281.48,113.25l23.3-76.23-4.48-14.37h10.75l28.38,90.6h-10.75l-5.48-17.6h-31.86l-5.38,17.6h-4.48ZM292.94,90.34h28.58l-14.44-46.21-14.14,46.21Z"/>
+            <path d="M341.43,67.95c0-27.96,16.73-47.37,37.44-47.11,10.95-.13,20.71,5.18,27.58,14.24l-3.68,4.79c-5.18-8.41-13.14-13.2-21.41-13.2-13.64,0-25.99,13.46-28.87,35.2-3.29,24.46,6.97,44.27,22.5,47.63,1.69.39,3.29.52,4.98.52,8.56,0,16.63-5.31,22.2-14.88l4.28,5.69c-6.87,9.06-16.63,14.37-27.58,14.24-20.71.26-37.44-19.16-37.44-47.11Z"/>
+            <path d="M415.41,22.65h9.86v90.6h-9.86V22.65Z"/>
+            <path d="M438.21,113.25V22.65h42.91v5.31h-33.06v34.69h26.48v5.31h-26.48v39.99h33.06v5.31h-42.91Z"/>
+            <path d="M488.59,105.1c3.48,2.85,7.47,4.01,11.05,3.24,10.16-2.2,10.45-16.31,10.45-26.27V22.65h9.96v60.83c0,17.73-4.38,31.58-19.91,31.58-5.08,0-10.25-2.2-14.04-6.86l2.49-3.11Z"/>
+            <path d="M568.05,20.84c20.71-.26,37.44,19.16,37.44,47.11s-16.73,47.37-37.44,47.11c-20.81.26-37.54-19.16-37.54-47.11s16.73-47.37,37.54-47.11ZM562.38,109.11c1.49.39,2.99.52,4.38.52,12.94,0,24.69-13.72,27.68-35.59,3.29-24.46-6.17-44.14-20.91-47.24-1.49-.39-2.99-.52-4.48-.52-12.84,0-24.49,13.72-27.48,35.59-3.38,24.46,6.27,44.14,20.81,47.24ZM573.33,0l6.67,4.4-12.64,12.04h-4.78l10.75-16.44Z"/>
+            <path d="M607.48,22.65h10.95l23.9,76.36,8.16-26.79-15.53-49.57h10.95l9.96,31.84,9.76-31.84h4.38l-11.85,39.09,11.65,37.28,23.3-76.36h4.48l-25.49,83.48,2.19,7.12h-10.95l-10.55-33.91-8.17,26.79,2.19,7.12h-10.95l-28.38-90.6Z"/>
+            <path d="M715.02,22.65v49.57l27.78-49.57h5.08l-21.41,38.18,28.48,52.42h-12.15l-22.5-41.42-5.28,9.58v31.84h-9.96V22.65h9.96Z"/>
+            <path d="M757.44,113.25l23.3-76.23-4.48-14.37h10.75l28.38,90.6h-10.75l-5.48-17.6h-31.86l-5.38,17.6h-4.48ZM768.89,90.34h28.58l-14.44-46.21-14.14,46.21Z"/>
+            <path d="M152.58,123.9c6.53-11.36,10.29-24.5,10.29-38.52s-3.76-27.16-10.29-38.52c-.03-.08-.05-.16-.09-.23-.04-.07-.1-.13-.15-.19C138.89,23.41,113.92,7.88,85.37,7.88S31.86,23.41,18.41,46.45c-.05.06-.11.12-.15.19-.04.07-.06.15-.09.23-6.54,11.36-10.29,24.5-10.29,38.52s3.76,27.16,10.29,38.52c.03.08.05.16.09.23.05.08.11.15.17.22,13.45,23.02,38.41,38.53,66.94,38.53s53.49-15.51,66.94-38.53c.06-.07.12-.14.17-.22.04-.07.06-.15.09-.23ZM85,.26C38.13.26,0,38.39,0,85.26s38.13,85,85,85,85-38.13,85-85S131.86.26,85,.26ZM85,167.74c-45.48,0-82.49-37-82.49-82.49S39.51,2.77,85,2.77s82.49,37,82.49,82.49-37,82.49-82.49,82.49Z"/>
+          </svg>
+        </div>
+        <p>A larch-log house, hand-carved by a hundred winters. Restored quietly, for nine.</p>
+      </div>
+      <div>
+        <h4>The Villa</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#amenities">Amenities</a></li>
+          <li><a href="#location">Location</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Stay</h4>
+        <ul>
+          <li><a href="#contact">Check Availability</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#">House Rules</a></li>
+          <li><a href="#">Cancellation Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <ul>
+          <li><a href="#">Instagram · @willamaciejowka</a></li>
+          <li><a href="#">Pinterest</a></li>
+          <li><a href="#">Newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div style="display:flex;align-items:center;gap:16px;">
+        <svg class="footer-rosette" viewBox="0 0 169.99 169.99" aria-hidden="true">
+          <g fill="currentColor">
+            <path d="M152.58,123.64c6.53-11.36,10.29-24.5,10.29-38.52s-3.76-27.16-10.29-38.52c-.03-.08-.05-.16-.09-.23-.04-.07-.1-.13-.15-.19C138.89,23.15,113.92,7.62,85.37,7.62S31.86,23.15,18.41,46.18c-.05.06-.11.12-.15.19-.04.07-.06.15-.09.23-6.54,11.36-10.29,24.5-10.29,38.52s3.76,27.16,10.29,38.52c.03.08.05.16.09.23.05.08.11.15.17.22,13.45,23.02,38.41,38.53,66.94,38.53s53.49-15.51,66.94-38.53c.06-.07.12-.14.17-.22.04-.07.06-.15.09-.23Z"/>
+            <path d="M85,0C38.13,0,0,38.13,0,85s38.13,85,85,85,85-38.13,85-85S131.86,0,85,0ZM85,167.48c-45.48,0-82.49-37-82.49-82.49S39.51,2.51,85,2.51s82.49,37,82.49,82.49-37,82.49-82.49,82.49Z"/>
+          </g>
+        </svg>
+        <span>© 2026 Willa Maciejówka · ul. Sienkiewicza 18 · Zakopane</span>
+      </div>
+      <div class="legal">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Imprint</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ——— LANGUAGE DROPDOWN ———
+  const langWrap = document.querySelector('.nav-lang');
+  const langTrigger = langWrap.querySelector('.nav-lang-trigger');
+  const langCode = langWrap.querySelector('.lang-code');
+  const langItems = langWrap.querySelectorAll('.nav-lang-menu li');
+
+  langTrigger.addEventListener('click', e => {
+    e.stopPropagation();
+    const open = langWrap.classList.toggle('open');
+    langTrigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  document.addEventListener('click', () => {
+    langWrap.classList.remove('open');
+    langTrigger.setAttribute('aria-expanded', 'false');
+  });
+  langItems.forEach(li => {
+    li.addEventListener('click', e => {
+      e.stopPropagation();
+      langItems.forEach(x => x.setAttribute('aria-selected', 'false'));
+      li.setAttribute('aria-selected', 'true');
+      langCode.textContent = li.dataset.lang;
+      langWrap.classList.remove('open');
+      langTrigger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // ——— ACTIVITIES TOGGLE ———
+  const seasons = {
+    winter: {
+      img: "Tatra ridge in deep snow, warm afternoon light",
+      items: [
+        { title: "Kasprowy Wierch Gondola", desc: "Eight minutes to a 1,987 m summit. Off-piste skiing, panoramic restaurant, the kind of silence only altitude makes.", meta: "15 min drive · €18 / adult" },
+        { title: "Polana Szymoszkowa", desc: "Family-friendly slopes on the Zakopane edge. Equipment rental at the gate, easy reds, ski school in English.", meta: "10 min drive" },
+        { title: "Krupówki Sleigh Rides", desc: "Traditional horse-drawn kuligi through Dolina Kościeliska, with bonfire and oscypek at the turnaround.", meta: "Pre-bookable from villa" },
+        { title: "Thermal Baths · Chochołów", desc: "Outdoor pools at -10°C, steam rising into the night. Drive there for sunset, return for supper.", meta: "25 min drive" },
+        { title: "Snowshoe to Dolina Strążyska", desc: "Quiet valley walk, two hours round-trip from a trailhead five minutes away. Snowshoes loaned by the villa.", meta: "From the front door" }
+      ]
+    },
+    summer: {
+      img: "Tatra meadow in late summer, wildflowers and stone peaks",
+      items: [
+        { title: "Morskie Oko Lake Walk", desc: "Poland's most photographed alpine lake, reached on a forest road closed to cars. Two hours up, slower coming back.", meta: "25 min drive · 18 km hike" },
+        { title: "Gubałówka Funicular", desc: "Ten minutes to the ridgeline above town, with bakeries, sheep cheese stalls, and a 360° view of the Tatras.", meta: "10 min walk to base" },
+        { title: "Dolina Kościeliska Bike Ride", desc: "Twelve flat kilometres through a karst valley, with caves and a mountain hut serving żurek for lunch.", meta: "Bikes available · 20 min drive" },
+        { title: "Rafting on the Dunajec", desc: "Traditional flat-bottom raft trip through the Pieniny gorge, steered by Górale in folk dress.", meta: "60 min drive · half-day" },
+        { title: "Garden Suppers", desc: "We can arrange a private grill, oscypek tasting, or three-course supper in the villa garden — by a Góral chef.", meta: "Pre-bookable · for 4–9 guests" }
+      ]
+    }
+  };
+
+  const list = document.getElementById('activities-list');
+  const imgLabel = document.getElementById('season-img-label');
+  const tabs = document.querySelectorAll('.activities-toggle button');
+
+  function renderSeason(name) {
+    const data = seasons[name];
+    imgLabel.textContent = data.img;
+    list.innerHTML = data.items.map((it, i) => `
+      <li>
+        <span class="idx">— ${String(i+1).padStart(2,'0')} —</span>
+        <div>
+          <div class="title">${it.title}</div>
+          <p class="desc">${it.desc}</p>
+          <span class="meta">${it.meta}</span>
+        </div>
+      </li>
+    `).join('');
+    tabs.forEach(t => t.classList.toggle('active', t.dataset.season === name));
+  }
+
+  tabs.forEach(t => t.addEventListener('click', () => renderSeason(t.dataset.season)));
+  renderSeason('winter');
+
+  // ——— FAQ ACCORDION ———
+  const faqs = [
+    { q: "What is the nightly rate?", a: "Our rates vary depending on the season and length of stay. You can check our best available rates via our Booking System. By booking directly with us you save 10%–20% compared with Airbnb and Booking.com." },
+    { q: "How many guests can the villa sleep?", a: "Up to nine guests across four bedrooms — two doubles on the ground floor, a master with en-suite upstairs, and a family room with a double plus a single bed. Our villa is ideal for families and groups." },
+    { q: "Are dogs welcome?", a: "Dogs are warmly welcomed at no extra cost. We simply ask that they stay off the upholstered furniture and that you clean up after them, both indoors and out." },
+    { q: "What is included in the rate?", a: "All linen and towels, coffee & tea, water bottles, cosmetics (shampoo, soap), vanity kits, Wi-Fi, up to three on-site parking spaces and more." },
+    { q: "Is there a minimum stay?", a: "Standard length of stay is 3 nights, however it may vary depending on the season and existing reservations. Sometimes we accommodate shorter stays — please reach out to us directly at maciejowka.willa@gmail.com." },
+    { q: "How do I get from Kraków airport?", a: "There are multiple transfer options ranging from direct bus connections, train, rental cars and private transfers. If you need help arranging transportation, please let us know when making a reservation." },
+    { q: "What is your cancellation policy?", a: "Free cancellation up to 30 days before arrival. Within 30 days, the deposit (30% of the total) is non-refundable but transferable to a future stay within 12 months." },
+    { q: "Can you arrange ski rental, lessons, or transfers?", a: "Yes — we work with trusted local partners for ski rental delivered to the villa, English-speaking ski instructors, private chefs, and mountain guides. Just let us know what you'd like." }
+  ];
+
+  const faqList = document.getElementById('faq-list');
+  faqList.innerHTML = faqs.map((f, i) => `
+    <div class="faq-item${i === 0 ? ' open' : ''}">
+      <button class="faq-q" type="button">
+        <span>${f.q}</span>
+        <span class="toggle">+</span>
+      </button>
+      <div class="faq-a">${f.a}</div>
+    </div>
+  `).join('');
+
+  faqList.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => q.closest('.faq-item').classList.toggle('open'));
+  });
+
+  // ——— CONTACT FORM ———
+  const form = document.getElementById('contactForm');
+  const formSuccess = document.getElementById('formSuccess');
+  const formErrorMsg = document.getElementById('formErrorMsg');
+  const consentWrap = document.getElementById('consentWrap');
+  const consentCheckbox = document.getElementById('gdprConsent');
+  const consentError = document.getElementById('consentError');
+  const submitBtn = document.getElementById('submitBtn');
+  const btnLabel = submitBtn.querySelector('.btn-label');
+  const btnLoading = submitBtn.querySelector('.btn-loading');
+
+  consentCheckbox.addEventListener('change', () => {
+    if (consentCheckbox.checked) {
+      consentWrap.classList.remove('error');
+      consentError.style.display = 'none';
+    }
+  });
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    let valid = true;
+
+    // validate required text fields
+    form.querySelectorAll('[required]:not([type="checkbox"])').forEach(field => {
+      if (!field.value.trim()) {
+        field.style.borderBottomColor = 'var(--red)';
+        valid = false;
+        field.addEventListener('input', () => field.style.borderBottomColor = '', { once: true });
+      }
+    });
+
+    // validate email format
+    const emailField = form.querySelector('[type="email"]');
+    if (emailField.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value)) {
+      emailField.style.borderBottomColor = 'var(--red)';
+      valid = false;
+    }
+
+    // validate GDPR consent
+    if (!consentCheckbox.checked) {
+      consentWrap.classList.add('error');
+      consentError.style.display = 'block';
+      valid = false;
+    }
+
+    if (!valid) return;
+
+    submitBtn.disabled = true;
+    btnLabel.hidden = true;
+    btnLoading.hidden = false;
+
+    try {
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString()
+      });
+      form.hidden = true;
+      formSuccess.classList.add('visible');
+    } catch (_) {
+      submitBtn.disabled = false;
+      btnLabel.hidden = false;
+      btnLoading.hidden = true;
+      formErrorMsg.classList.add('visible');
+    }
+  });
+</script>
+</body>
+</html>
