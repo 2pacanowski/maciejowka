@@ -338,7 +338,7 @@ hr.divider { border: none; border-top: 1px solid var(--rule-light); margin: 0; }
   font-family: var(--serif); font-style: italic; font-size: 20px; line-height: 1.5; color: var(--linen); margin: 0;
   display: -webkit-box; -webkit-line-clamp: 4; line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;
 }
-.review .quote.expanded { display: block; overflow: visible; }
+.review .quote.expanded { display: block; -webkit-line-clamp: unset; line-clamp: unset; -webkit-box-orient: unset; overflow: visible; }
 .review .quote::before { content: "\201C"; font-size: 36px; color: var(--red); vertical-align: -10px; margin-right: 4px; line-height: 0; }
 .review-toggle {
   background: none; border: none; padding: 0; margin-top: 14px;
