@@ -536,11 +536,11 @@ hr.divider { border: none; border-top: 1px solid var(--rule-light); margin: 0; }
   /* hero */
   .hero { min-height: 100svh; }
   .hero-inner { padding: 0 var(--gutter) 64px; }
-  .hero h1 { font-size: clamp(52px, 14vw, 72px); }
-  .hero .lede { font-size: 18px; margin-top: 20px; }
-  .hero-bottom { flex-direction: column; align-items: flex-start; gap: 28px; margin-top: 36px; }
-  .hero-actions { flex-wrap: wrap; }
-  .hero-meta { gap: 14px; flex-wrap: nowrap; align-items: center; }
+  .hero h1 { font-size: clamp(52px, 14vw, 72px); text-align: center; }
+  .hero .lede { font-size: 18px; margin-top: 20px; text-align: center; }
+  .hero-bottom { flex-direction: column; align-items: center; gap: 28px; margin-top: 36px; }
+  .hero-actions { flex-wrap: wrap; justify-content: center; }
+  .hero-meta { gap: 14px; flex-wrap: nowrap; align-items: center; justify-content: center; }
   .hero-meta .val { font-size: 20px; }
   .hero-meta .gf-laurel { width: 16px; height: 36px; flex-basis: 16px; }
   .hero-meta .gf-badge { gap: 5px; }
