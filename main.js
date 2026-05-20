@@ -105,6 +105,21 @@ function renderSeason(name) {
 tabs.forEach(t => t.addEventListener('click', () => renderSeason(t.dataset.season)));
 renderSeason('winter');
 
+// ——— REVIEW EXPAND ———
+document.querySelectorAll('.review .quote').forEach(quote => {
+  if (quote.scrollHeight <= quote.clientHeight) return;
+  const btn = document.createElement('button');
+  btn.className = 'review-toggle';
+  btn.textContent = 'Read more';
+  btn.setAttribute('aria-expanded', 'false');
+  quote.after(btn);
+  btn.addEventListener('click', () => {
+    const expanded = quote.classList.toggle('expanded');
+    btn.textContent = expanded ? 'Read less' : 'Read more';
+    btn.setAttribute('aria-expanded', String(expanded));
+  });
+});
+
 // ——— FAQ ACCORDION ———
 const faqs = [
   { q: "What is the nightly rate?", a: "Our rates vary depending on the season and length of stay. You can check our best available rates via our Booking System. By booking directly with us you save 10%–20% compared with Airbnb and Booking.com." },
