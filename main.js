@@ -106,12 +106,8 @@ tabs.forEach(t => t.addEventListener('click', () => renderSeason(t.dataset.seaso
 renderSeason('winter');
 
 // ——— REVIEW EXPAND ———
-document.querySelectorAll('.review .quote').forEach(quote => {
-  const btn = document.createElement('button');
-  btn.className = 'review-toggle';
-  btn.textContent = 'Read more';
-  btn.setAttribute('aria-expanded', 'false');
-  quote.after(btn);
+document.querySelectorAll('.review-toggle').forEach(btn => {
+  const quote = btn.previousElementSibling;
   btn.addEventListener('click', () => {
     const expanded = quote.classList.toggle('expanded');
     btn.textContent = expanded ? 'Read less' : 'Read more';
