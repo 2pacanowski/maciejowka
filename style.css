@@ -336,9 +336,16 @@ hr.divider { border: none; border-top: 1px solid var(--rule-light); margin: 0; }
 .review .stars { color: var(--red); font-size: 16px; letter-spacing: 6px; }
 .review .quote {
   font-family: var(--serif); font-style: italic; font-size: 20px; line-height: 1.5; color: var(--linen); margin: 0;
-  display: -webkit-box; -webkit-line-clamp: 4; line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;
+  position: relative; max-height: 6em; overflow: hidden;
+  transition: max-height 0.45s ease;
 }
-.review .quote.expanded { -webkit-line-clamp: 999; line-clamp: 999; overflow: visible; }
+.review .quote::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2.5em;
+  background: linear-gradient(transparent, #3B2E22);
+  pointer-events: none; transition: opacity 0.3s ease;
+}
+.review .quote.expanded { max-height: 40em; }
+.review .quote.expanded::after { opacity: 0; }
 .review .quote::before { content: "\201C"; font-size: 36px; color: var(--red); vertical-align: -10px; margin-right: 4px; line-height: 0; }
 .review-toggle {
   background: none; border: none; padding: 0; margin-top: 14px;
