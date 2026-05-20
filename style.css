@@ -468,7 +468,7 @@ hr.divider { border: none; border-top: 1px solid var(--rule-light); margin: 0; }
   .section-head h2 { font-size: 44px; }
 
   /* nav */
-  .nav-links, .nav-lang { display: none; }
+  .nav-links, .nav-lang, .nav-cta { display: none; }
   .nav-hamburger { display: flex; }
   .nav-inner { padding: 18px 32px; }
 
