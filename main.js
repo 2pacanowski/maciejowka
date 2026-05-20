@@ -107,11 +107,6 @@ renderSeason('winter');
 
 // ——— REVIEW EXPAND ———
 document.querySelectorAll('.review .quote').forEach(quote => {
-  quote.classList.add('expanded');
-  const fullH = quote.offsetHeight;
-  quote.classList.remove('expanded');
-  const clampedH = quote.offsetHeight;
-  if (fullH <= clampedH) return;
   const btn = document.createElement('button');
   btn.className = 'review-toggle';
   btn.textContent = 'Read more';
