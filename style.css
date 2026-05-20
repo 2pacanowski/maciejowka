@@ -196,7 +196,7 @@ hr.divider { border: none; border-top: 1px solid var(--rule-light); margin: 0; }
   letter-spacing: 0.28em; text-transform: uppercase;
   color: rgba(245,239,221,0.7);
 }
-.hero-meta .val { display: block; font-family: var(--display); font-size: 28px; letter-spacing: 0.04em; color: var(--linen); margin-bottom: 6px; }
+.hero-meta .val { text-align: center; display: block; font-family: var(--display); font-size: 28px; letter-spacing: 0.04em; color: var(--linen); margin-bottom: 6px; }
 
 /* Guest Favourite badge */
 .gf-badge { display: flex; align-items: center; gap: 6px; color: var(--linen); }
