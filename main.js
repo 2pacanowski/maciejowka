@@ -105,33 +105,6 @@ function renderSeason(name) {
 tabs.forEach(t => t.addEventListener('click', () => renderSeason(t.dataset.season)));
 renderSeason('winter');
 
-// ——— FAQ ACCORDION ———
-const faqs = [
-  { q: "What is the nightly rate?", a: "Our rates vary depending on the season and length of stay. You can check our best available rates via our Booking System. By booking directly with us you save 10%–20% compared with Airbnb and Booking.com." },
-  { q: "How many guests can the villa sleep?", a: "Up to nine guests across four bedrooms — two doubles on the ground floor, a master with en-suite upstairs, and a family room with a double plus a single bed. Our villa is ideal for families and groups." },
-  { q: "Are dogs welcome?", a: "Dogs are warmly welcomed at no extra cost. We simply ask that they stay off the upholstered furniture and that you clean up after them, both indoors and out." },
-  { q: "What is included in the rate?", a: "All linen and towels, coffee & tea, water bottles, cosmetics (shampoo, soap), vanity kits, Wi-Fi, up to three on-site parking spaces and more." },
-  { q: "Is there a minimum stay?", a: "Standard length of stay is 3 nights, however it may vary depending on the season and existing reservations. Sometimes we accommodate shorter stays — please reach out to us directly at maciejowka.willa@gmail.com." },
-  { q: "How do I get from Kraków airport?", a: "There are multiple transfer options ranging from direct bus connections, train, rental cars and private transfers. If you need help arranging transportation, please let us know when making a reservation." },
-  { q: "What is your cancellation policy?", a: "Free cancellation up to 30 days before arrival. Within 30 days, the deposit (30% of the total) is non-refundable but transferable to a future stay within 12 months." },
-  { q: "Can you arrange ski rental, lessons, or transfers?", a: "Yes — we work with trusted local partners for ski rental delivered to the villa, English-speaking ski instructors, private chefs, and mountain guides. Just let us know what you'd like." }
-];
-
-const faqList = document.getElementById('faq-list');
-faqList.innerHTML = faqs.map((f, i) => `
-  <div class="faq-item${i === 0 ? ' open' : ''}">
-    <button class="faq-q" type="button">
-      <span>${f.q}</span>
-      <span class="toggle">+</span>
-    </button>
-    <div class="faq-a">${f.a}</div>
-  </div>
-`).join('');
-
-faqList.querySelectorAll('.faq-q').forEach(q => {
-  q.addEventListener('click', () => q.closest('.faq-item').classList.toggle('open'));
-});
-
 // ——— CONTACT FORM ———
 const form = document.getElementById('contactForm');
 const formSuccess = document.getElementById('formSuccess');
