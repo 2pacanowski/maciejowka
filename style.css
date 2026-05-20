@@ -203,7 +203,7 @@ hr.divider { border: none; border-top: 1px solid var(--rule-light); margin: 0; }
 .gf-laurel { width: 22px; height: 52px; color: var(--linen); flex: 0 0 22px; }
 .gf-text { display: flex; flex-direction: column; align-items: center; gap: 4px; line-height: 1; }
 .gf-title { font-family: var(--display); font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase; text-align: center; line-height: 1.1; color: var(--linen); }
-.gf-sub { font-family: var(--sans); font-size: 9px; letter-spacing: 0.32em; text-transform: uppercase; color: rgba(245,239,221,0.65); }
+.gf-sub { font-family: var(--sans); font-size: 9px; letter-spacing: 0.32em; text-transform: uppercase; color: rgba(245,239,221,0.65); text-align: center; }
 
 /* ——— USP ——— */
 .usp { background: var(--linen); }
