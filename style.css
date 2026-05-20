@@ -183,7 +183,7 @@ hr.divider { border: none; border-top: 1px solid var(--rule-light); margin: 0; }
 .hero h1 .accent { color: var(--red); font-style: normal; }
 .hero .lede {
   font-family: var(--serif); font-style: italic; font-size: 28px;
-  line-height: 1.35; color: rgba(245,239,221,0.85); max-width: 32ch; margin: 32px 0 0;
+  line-height: 1.35; color: rgba(245,239,221,0.85); max-width: 36ch; margin: 32px 0 0;
 }
 .hero-bottom {
   margin-top: 56px; display: flex; align-items: center;
