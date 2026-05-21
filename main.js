@@ -50,9 +50,16 @@ document.addEventListener('click', () => {
 langItems.forEach(li => {
   li.addEventListener('click', e => {
     e.stopPropagation();
+    const selected = li.dataset.lang;
+    const currentLang = document.documentElement.lang;
+    if (selected === 'PL' && currentLang === 'en') {
+      window.location.href = './index-pl.html';
+    } else if (selected === 'EN' && currentLang === 'pl') {
+      window.location.href = './index.html';
+    }
     langItems.forEach(x => x.setAttribute('aria-selected', 'false'));
     li.setAttribute('aria-selected', 'true');
-    langCode.textContent = li.dataset.lang;
+    langCode.textContent = selected;
     langWrap.classList.remove('open');
     langTrigger.setAttribute('aria-expanded', 'false');
   });
