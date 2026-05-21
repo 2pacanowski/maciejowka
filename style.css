@@ -273,7 +273,8 @@ hr.divider { border: none; border-top: 1px solid var(--rule-light); margin: 0; }
   gap: 1px; background: rgba(245,239,221,0.18); border: 1px solid rgba(245,239,221,0.18);
 }
 .am-item { background: var(--ink); padding: 40px 32px; min-height: 200px; display: flex; flex-direction: column; gap: 16px; }
-.am-item .icon { width: 32px; height: 32px; color: var(--red); }
+.am-item .icon { width: 2px; height: 32px; color: var(--red); }
+.icon {font-size: 25px;}
 .am-item h4 { font-family: var(--display); font-size: 22px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--linen); margin: 12px 0 0; }
 .am-item p { font-family: var(--serif); font-size: 16px; color: var(--mist); margin: 0; line-height: 1.5; }
 /* watermark rosette behind amenities */
