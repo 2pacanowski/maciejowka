@@ -109,8 +109,10 @@ function renderSeason(name) {
   tabs.forEach(t => t.classList.toggle('active', t.dataset.season === name));
 }
 
-tabs.forEach(t => t.addEventListener('click', () => renderSeason(t.dataset.season)));
-renderSeason('winter');
+if (list) {
+  tabs.forEach(t => t.addEventListener('click', () => renderSeason(t.dataset.season)));
+  renderSeason('winter');
+}
 
 // ——— CONTACT FORM ———
 const form = document.getElementById('contactForm');
@@ -179,4 +181,128 @@ form.addEventListener('submit', async e => {
     setLoading(false);
     formErrorMsg.classList.add('visible');
   }
+});
+
+// ——— GALLERY LIGHTBOX ———
+const PHOTOS = [
+  { src: 'photos/willa%20maciej%C3%B3wka%20zakopane%20dom%20fasada%201.webp', alt: 'Willa Maciejówka — traditional Zakopane villa exterior' },
+  { src: 'photos/willa%20na%20wynajem%20zakopane.webp', alt: 'Villa exterior' },
+  { src: 'photos/rent%20a%20villa%20zakopane%20view.webp', alt: 'Villa with mountain views' },
+  { src: 'photos/willa%20maciej%C3%B3wka%20zakopane%20parking.webp', alt: 'Private parking' },
+  { src: 'photos/vacation%20home%20zakopane%20hall.webp', alt: 'Entrance hall' },
+  { src: 'photos/willa%20maciej%C3%B3wka%20zakopane%20hol.webp', alt: 'Hallway' },
+  { src: 'photos/willa%20maciej%C3%B3wka%20zakopane%20schody.webp', alt: 'Staircase' },
+  { src: 'photos/dom%20na%20wynajem%20zakopane%20oranzeria.webp', alt: 'Conservatory dining area' },
+  { src: 'photos/dom%20na%20wynajem%20zakopane%20oranzeria%202.webp', alt: 'Conservatory — sun-drenched dining' },
+  { src: 'photos/vacation%20home%20zakopane%20dining.webp', alt: 'Dining area' },
+  { src: 'photos/vacation%20home%20zakopane%20villa%20dining%20area.webp', alt: 'Villa dining area' },
+  { src: 'photos/dom%20na%20wynajem%20zakopane%20kuchnia.webp', alt: 'Kitchen' },
+  { src: 'photos/vacation%20home%20zakopane%20kitchen.webp', alt: 'Fully-equipped kitchen' },
+  { src: 'photos/vacation%20home%20zakopane%20kuchnia.webp', alt: 'Kitchen' },
+  { src: 'photos/willa%20maciej%C3%B3wka%20zakopane%20kuchnia.webp', alt: 'Kitchen — Willa Maciejówka' },
+  { src: 'photos/zakopane%20villa%20for%20rent%20kitchen.webp', alt: 'Kitchen overview' },
+  { src: 'photos/dom%20na%20wynajem%20zakopane%20sypialnia.webp', alt: 'Double bedroom' },
+  { src: 'photos/dom%20na%20wynajem%20zakopane%20sypialnia%202.webp', alt: 'Bedroom — double bed' },
+  { src: 'photos/luxury%20villa%20zakopane%20bedroom.webp', alt: 'Bedroom' },
+  { src: 'photos/vacation%20home%20zakopane%20villa%20bedroom.webp', alt: 'Villa bedroom' },
+  { src: 'photos/vacation%20home%20zakopane%20bed.webp', alt: 'Bedroom' },
+  { src: 'photos/villa%20zakopane%20bedroom.webp', alt: 'Bedroom' },
+  { src: 'photos/willa%20maciej%C3%B3wka%20zakopane%20sypialnia.webp', alt: 'Bedroom — Willa Maciejówka' },
+  { src: 'photos/zakopane%20villa%20for%20rent%20bedroom.webp', alt: 'Bedroom' },
+  { src: 'photos/zakopane%20villa%20for%20rent%20bedroom%202.webp', alt: 'Second bedroom' },
+  { src: 'photos/zakopane%20villa%20for%20rent%20bedrrom3.webp', alt: 'Third bedroom' },
+  { src: 'photos/luxury%20villa%20zakopane%20bath.webp', alt: 'Bathroom — bathtub' },
+  { src: 'photos/luxury%20villa%20zakopane%20bathroom.webp', alt: 'Bathroom' },
+  { src: 'photos/luxury%20villa%20zakopane%20shower.webp', alt: 'Bathroom — shower' },
+  { src: 'photos/villa%20zakopane%20bathroom.webp', alt: 'Bathroom' },
+  { src: 'photos/villa%20zakopane%20bathroom%202.webp', alt: 'Second bathroom' },
+  { src: 'photos/zakopane%20villa%20for%20rent%20bathroom.webp', alt: 'Bathroom' },
+  { src: 'photos/willa%20maciej%C3%B3wka%20zakopane%20lazienka.webp', alt: 'Bathroom — Willa Maciejówka' },
+  { src: 'photos/willa%20maciej%C3%B3wka%20zakopane%20pralka.webp', alt: 'Laundry room' },
+];
+
+// indices in PHOTOS array for each featured grid slot (g-1 … g-6)
+const FEATURED_INDICES = [0, 7, 22, 12, 27, 9];
+
+const lbOverlay     = document.getElementById('lbOverlay');
+const lbOverlayClose = document.getElementById('lbOverlayClose');
+const lbOverlayGrid  = document.getElementById('lbOverlayGrid');
+const lbViewer      = document.getElementById('lbViewer');
+const lbViewerClose = document.getElementById('lbViewerClose');
+const lbViewerPrev  = document.getElementById('lbViewerPrev');
+const lbViewerNext  = document.getElementById('lbViewerNext');
+const lbViewerImg   = document.getElementById('lbViewerImg');
+const lbViewerCounter = document.getElementById('lbViewerCounter');
+const viewAllBtn    = document.getElementById('galleryViewAll');
+
+let lbCurrentIdx = 0;
+let overlayWasOpen = false;
+
+// Build overlay thumbnail grid
+PHOTOS.forEach((p, i) => {
+  const img = document.createElement('img');
+  img.src = p.src;
+  img.alt = p.alt;
+  img.loading = 'lazy';
+  img.addEventListener('click', () => openViewer(i, true));
+  lbOverlayGrid.appendChild(img);
+});
+
+function openOverlay() {
+  lbOverlay.classList.add('open');
+  document.body.classList.add('lb-open');
+}
+
+function closeOverlay() {
+  lbOverlay.classList.remove('open');
+  document.body.classList.remove('lb-open');
+}
+
+function openViewer(idx, fromOverlay) {
+  overlayWasOpen = fromOverlay;
+  if (overlayWasOpen) lbOverlay.classList.remove('open');
+  lbCurrentIdx = idx;
+  lbViewerImg.src = PHOTOS[idx].src;
+  lbViewerImg.alt = PHOTOS[idx].alt;
+  lbViewerCounter.textContent = (idx + 1) + ' / ' + PHOTOS.length;
+  lbViewer.classList.add('open');
+  document.body.classList.add('lb-open');
+}
+
+function closeViewer() {
+  lbViewer.classList.remove('open');
+  lbViewerImg.src = '';
+  if (overlayWasOpen) {
+    lbOverlay.classList.add('open');
+  } else {
+    document.body.classList.remove('lb-open');
+  }
+}
+
+function lbNavigate(dir) {
+  lbCurrentIdx = (lbCurrentIdx + dir + PHOTOS.length) % PHOTOS.length;
+  lbViewerImg.src = PHOTOS[lbCurrentIdx].src;
+  lbViewerImg.alt = PHOTOS[lbCurrentIdx].alt;
+  lbViewerCounter.textContent = (lbCurrentIdx + 1) + ' / ' + PHOTOS.length;
+}
+
+if (viewAllBtn) viewAllBtn.addEventListener('click', openOverlay);
+lbOverlayClose.addEventListener('click', closeOverlay);
+lbViewerClose.addEventListener('click', closeViewer);
+lbViewerPrev.addEventListener('click', () => lbNavigate(-1));
+lbViewerNext.addEventListener('click', () => lbNavigate(1));
+
+document.addEventListener('keydown', e => {
+  if (lbViewer.classList.contains('open')) {
+    if (e.key === 'Escape') closeViewer();
+    if (e.key === 'ArrowLeft') lbNavigate(-1);
+    if (e.key === 'ArrowRight') lbNavigate(1);
+  } else if (lbOverlay.classList.contains('open')) {
+    if (e.key === 'Escape') closeOverlay();
+  }
+});
+
+// Featured grid clicks open viewer directly
+document.querySelectorAll('.gallery-grid .g').forEach((cell, i) => {
+  cell.addEventListener('click', () => openViewer(FEATURED_INDICES[i], false));
 });

@@ -186,15 +186,27 @@
       <p class="lede">Conservatory breakfasts, larch-beamed bedrooms, and a garden that opens onto the Tatras.</p>
     </div>
     <div class="gallery-grid">
-      <div class="g g-1 placeholder"><span>Exterior · winter dusk · hero</span></div>
-      <div class="g g-2 placeholder"><span>Conservatory · dining table</span></div>
-      <div class="g g-3 placeholder"><span>Triangular window · larch detail</span></div>
-      <div class="g g-4 placeholder"><span>Master bedroom · en-suite</span></div>
-      <div class="g g-5 placeholder"><span>Living room · upstairs</span></div>
-      <div class="g g-6 placeholder"><span>Garden · summer evening</span></div>
+      <div class="g g-1">
+        <img src="photos/willa%20maciej%C3%B3wka%20zakopane%20dom%20fasada%201.webp" alt="Willa Maciejówka — traditional Zakopane villa exterior" loading="eager">
+      </div>
+      <div class="g g-2">
+        <img src="photos/dom%20na%20wynajem%20zakopane%20oranzeria.webp" alt="Conservatory with dining table" loading="lazy">
+      </div>
+      <div class="g g-3">
+        <img src="photos/willa%20maciej%C3%B3wka%20zakopane%20sypialnia.webp" alt="Bedroom with traditional triangular windows" loading="lazy">
+      </div>
+      <div class="g g-4">
+        <img src="photos/vacation%20home%20zakopane%20kitchen.webp" alt="Fully-equipped kitchen" loading="lazy">
+      </div>
+      <div class="g g-5">
+        <img src="photos/luxury%20villa%20zakopane%20bathroom.webp" alt="Bathroom" loading="lazy">
+      </div>
+      <div class="g g-6">
+        <img src="photos/vacation%20home%20zakopane%20dining.webp" alt="Dining area" loading="lazy">
+      </div>
     </div>
     <div class="gallery-cta">
-      <a href="#" class="btn">View All Photographs <span class="arrow">→</span></a>
+      <button type="button" class="btn" id="galleryViewAll">View All Photographs <span class="arrow">→</span></button>
     </div>
   </div>
 </section>
@@ -670,6 +682,24 @@
     </div>
   </div>
 </footer>
+
+<!-- LIGHTBOX OVERLAY (all photos grid) -->
+<div class="lb-overlay" id="lbOverlay">
+  <div class="lb-overlay-bar">
+    <span>34 Photographs</span>
+    <button type="button" class="lb-close" id="lbOverlayClose" aria-label="Close gallery">✕</button>
+  </div>
+  <div class="lb-overlay-grid" id="lbOverlayGrid"></div>
+</div>
+
+<!-- LIGHTBOX VIEWER (single photo) -->
+<div class="lb-viewer" id="lbViewer">
+  <button type="button" class="lb-v-close" id="lbViewerClose" aria-label="Close">✕</button>
+  <button type="button" class="lb-v-prev" id="lbViewerPrev" aria-label="Previous photo">&#8249;</button>
+  <img class="lb-v-img" id="lbViewerImg" src="" alt="">
+  <button type="button" class="lb-v-next" id="lbViewerNext" aria-label="Next photo">&#8250;</button>
+  <div class="lb-v-counter" id="lbViewerCounter">1 / 34</div>
+</div>
 
 <script src="main.js"></script>
 </body>
