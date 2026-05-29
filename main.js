@@ -222,7 +222,7 @@ const PHOTOS = [
 ];
 
 // indices in PHOTOS array for each featured grid slot (g-1 … g-6)
-const FEATURED_INDICES = [0, 7, 22, 12, 27, 9];
+const FEATURED_INDICES = [7, 22, 27, 16, 12, 0];
 
 const lbOverlay     = document.getElementById('lbOverlay');
 const lbOverlayClose = document.getElementById('lbOverlayClose');
