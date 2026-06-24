@@ -158,7 +158,7 @@ hr.divider { border: none; border-top: 1px solid var(--rule-light); margin: 0; }
   position: absolute; inset: 0;
   background:
     linear-gradient(180deg, rgba(31,37,33,0.25) 0%, rgba(31,37,33,0.45) 55%, rgba(31,37,33,0.82) 100%),
-    url('hero-villa.webp') center 65% / cover no-repeat;
+    url('hero-villa-desktop.webp') center 65% / cover no-repeat;
 }
 .hero-bg::after {
   content: ""; position: absolute; inset: 0;
@@ -225,7 +225,7 @@ hr.divider { border: none; border-top: 1px solid var(--rule-light); margin: 0; }
 }
 .about-stats .stat .num { font-family: var(--display); font-size: 40px; color: var(--red); line-height: 1; }
 .about-stats .stat .lbl { font-family: var(--sans); font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--larch); margin-top: 8px; display: block; }
-.about-image { position: relative; background: #EFE5D2; overflow: hidden; }
+.about-image { position: relative; background: #EFE5D2; overflow: hidden; aspect-ratio: 707 / 936; }
 .about-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .about .badge {
   position: absolute; bottom: -28px; right: -28px;
@@ -536,6 +536,11 @@ hr.divider { border: none; border-top: 1px solid var(--rule-light); margin: 0; }
 /* ——— MOBILE — 640px ——— */
 @media (max-width: 640px) {
   :root { --gutter: 20px; }
+  .hero-bg {
+    background:
+      linear-gradient(180deg, rgba(31,37,33,0.25) 0%, rgba(31,37,33,0.45) 55%, rgba(31,37,33,0.82) 100%),
+      url('hero-villa-mobile.webp') center 65% / cover no-repeat;
+  }
   .section { padding: 64px 0; }
   .section-head { margin-bottom: 40px; }
   .section-head h2 { font-size: 32px; }
