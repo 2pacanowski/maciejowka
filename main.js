@@ -52,10 +52,12 @@ langItems.forEach(li => {
     e.stopPropagation();
     const selected = li.dataset.lang;
     const currentLang = document.documentElement.lang;
+    const plHref = document.documentElement.dataset.plHref || './index-pl.html';
+    const enHref = document.documentElement.dataset.enHref || './index.html';
     if (selected === 'PL' && currentLang === 'en') {
-      window.location.href = './index-pl.html';
+      window.location.href = plHref;
     } else if (selected === 'EN' && currentLang === 'pl') {
-      window.location.href = './index.html';
+      window.location.href = enHref;
     }
     langItems.forEach(x => x.setAttribute('aria-selected', 'false'));
     li.setAttribute('aria-selected', 'true');
