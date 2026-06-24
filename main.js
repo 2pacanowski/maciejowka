@@ -187,41 +187,63 @@ form.addEventListener('submit', async e => {
 
 // ——— GALLERY LIGHTBOX ———
 const PHOTOS = [
-  { src: 'photos/willa%20maciej%C3%B3wka%20zakopane%20dom%20fasada%201.webp', alt: 'Willa Maciejówka — traditional Zakopane villa exterior', room: 'Exterior & Grounds' },
-  { src: 'photos/willa%20na%20wynajem%20zakopane.webp', alt: 'Villa exterior', room: 'Exterior & Grounds' },
-  { src: 'photos/rent%20a%20villa%20zakopane%20view.webp', alt: 'Villa with mountain views', room: 'Exterior & Grounds' },
-  { src: 'photos/willa%20maciej%C3%B3wka%20zakopane%20parking.webp', alt: 'Private parking', room: 'Exterior & Grounds' },
-  { src: 'photos/vacation%20home%20zakopane%20hall.webp', alt: 'Entrance hall', room: 'Entrance & Hallway' },
-  { src: 'photos/willa%20maciej%C3%B3wka%20zakopane%20hol.webp', alt: 'Hallway', room: 'Entrance & Hallway' },
-  { src: 'photos/willa%20maciej%C3%B3wka%20zakopane%20schody.webp', alt: 'Staircase', room: 'Entrance & Hallway' },
-  { src: 'photos/dom%20na%20wynajem%20zakopane%20oranzeria.webp', alt: 'Conservatory dining area', room: 'Conservatory & Dining' },
-  { src: 'photos/dom%20na%20wynajem%20zakopane%20oranzeria%202.webp', alt: 'Conservatory — sun-drenched dining', room: 'Conservatory & Dining' },
-  { src: 'photos/vacation%20home%20zakopane%20dining.webp', alt: 'Dining area', room: 'Conservatory & Dining' },
-  { src: 'photos/vacation%20home%20zakopane%20villa%20dining%20area.webp', alt: 'Villa dining area', room: 'Conservatory & Dining' },
-  { src: 'photos/dom%20na%20wynajem%20zakopane%20kuchnia.webp', alt: 'Kitchen', room: 'Kitchen' },
-  { src: 'photos/vacation%20home%20zakopane%20kitchen.webp', alt: 'Fully-equipped kitchen', room: 'Kitchen' },
-  { src: 'photos/vacation%20home%20zakopane%20kuchnia.webp', alt: 'Kitchen', room: 'Kitchen' },
-  { src: 'photos/willa%20maciej%C3%B3wka%20zakopane%20kuchnia.webp', alt: 'Kitchen — Willa Maciejówka', room: 'Kitchen' },
-  { src: 'photos/zakopane%20villa%20for%20rent%20kitchen.webp', alt: 'Kitchen overview', room: 'Kitchen' },
-  { src: 'photos/dom%20na%20wynajem%20zakopane%20sypialnia.webp', alt: 'Double bedroom', room: 'Bedrooms' },
-  { src: 'photos/dom%20na%20wynajem%20zakopane%20sypialnia%202.webp', alt: 'Bedroom — double bed', room: 'Bedrooms' },
-  { src: 'photos/luxury%20villa%20zakopane%20bedroom.webp', alt: 'Bedroom', room: 'Bedrooms' },
-  { src: 'photos/vacation%20home%20zakopane%20villa%20bedroom.webp', alt: 'Villa bedroom', room: 'Bedrooms' },
-  { src: 'photos/vacation%20home%20zakopane%20bed.webp', alt: 'Bedroom', room: 'Bedrooms' },
-  { src: 'photos/villa%20zakopane%20bedroom.webp', alt: 'Bedroom', room: 'Bedrooms' },
-  { src: 'photos/willa%20maciej%C3%B3wka%20zakopane%20sypialnia.webp', alt: 'Bedroom — Willa Maciejówka', room: 'Bedrooms' },
-  { src: 'photos/zakopane%20villa%20for%20rent%20bedroom.webp', alt: 'Bedroom', room: 'Bedrooms' },
-  { src: 'photos/zakopane%20villa%20for%20rent%20bedroom%202.webp', alt: 'Second bedroom', room: 'Bedrooms' },
-  { src: 'photos/zakopane%20villa%20for%20rent%20bedrrom3.webp', alt: 'Third bedroom', room: 'Bedrooms' },
-  { src: 'photos/luxury%20villa%20zakopane%20bath.webp', alt: 'Bathroom — bathtub', room: 'Bathrooms' },
-  { src: 'photos/luxury%20villa%20zakopane%20bathroom.webp', alt: 'Bathroom', room: 'Bathrooms' },
-  { src: 'photos/luxury%20villa%20zakopane%20shower.webp', alt: 'Bathroom — shower', room: 'Bathrooms' },
-  { src: 'photos/villa%20zakopane%20bathroom.webp', alt: 'Bathroom', room: 'Bathrooms' },
-  { src: 'photos/villa%20zakopane%20bathroom%202.webp', alt: 'Second bathroom', room: 'Bathrooms' },
-  { src: 'photos/zakopane%20villa%20for%20rent%20bathroom.webp', alt: 'Bathroom', room: 'Bathrooms' },
-  { src: 'photos/willa%20maciej%C3%B3wka%20zakopane%20lazienka.webp', alt: 'Bathroom — Willa Maciejówka', room: 'Bathrooms' },
-  { src: 'photos/willa%20maciej%C3%B3wka%20zakopane%20pralka.webp', alt: 'Laundry room', room: 'Laundry' },
+  { src: 'photos/willa%20maciej%C3%B3wka%20zakopane%20dom%20fasada%201.webp', alt: 'Willa Maciejówka — traditional Zakopane villa exterior', altPl: 'Willa Maciejówka — tradycyjna willa w Zakopanem', room: 'exterior' },
+  { src: 'photos/willa%20na%20wynajem%20zakopane.webp', alt: 'Villa exterior', altPl: 'Willa z zewnątrz', room: 'exterior' },
+  { src: 'photos/rent%20a%20villa%20zakopane%20view.webp', alt: 'Villa with mountain views', altPl: 'Willa z widokiem na góry', room: 'exterior' },
+  { src: 'photos/willa%20maciej%C3%B3wka%20zakopane%20parking.webp', alt: 'Private parking', altPl: 'Prywatny parking', room: 'exterior' },
+  { src: 'photos/vacation%20home%20zakopane%20hall.webp', alt: 'Entrance hall', altPl: 'Hol wejściowy', room: 'hallway' },
+  { src: 'photos/willa%20maciej%C3%B3wka%20zakopane%20hol.webp', alt: 'Hallway', altPl: 'Korytarz', room: 'hallway' },
+  { src: 'photos/willa%20maciej%C3%B3wka%20zakopane%20schody.webp', alt: 'Staircase', altPl: 'Schody', room: 'hallway' },
+  { src: 'photos/dom%20na%20wynajem%20zakopane%20oranzeria.webp', alt: 'Conservatory dining area', altPl: 'Oranżeria — jadalnia', room: 'dining' },
+  { src: 'photos/dom%20na%20wynajem%20zakopane%20oranzeria%202.webp', alt: 'Conservatory — sun-drenched dining', altPl: 'Oranżeria — słoneczna jadalnia', room: 'dining' },
+  { src: 'photos/vacation%20home%20zakopane%20dining.webp', alt: 'Dining area', altPl: 'Jadalnia', room: 'dining' },
+  { src: 'photos/vacation%20home%20zakopane%20villa%20dining%20area.webp', alt: 'Villa dining area', altPl: 'Jadalnia w willi', room: 'dining' },
+  { src: 'photos/dom%20na%20wynajem%20zakopane%20kuchnia.webp', alt: 'Kitchen', altPl: 'Kuchnia', room: 'kitchen' },
+  { src: 'photos/vacation%20home%20zakopane%20kitchen.webp', alt: 'Fully-equipped kitchen', altPl: 'W pełni wyposażona kuchnia', room: 'kitchen' },
+  { src: 'photos/vacation%20home%20zakopane%20kuchnia.webp', alt: 'Kitchen', altPl: 'Kuchnia', room: 'kitchen' },
+  { src: 'photos/willa%20maciej%C3%B3wka%20zakopane%20kuchnia.webp', alt: 'Kitchen — Willa Maciejówka', altPl: 'Kuchnia — Willa Maciejówka', room: 'kitchen' },
+  { src: 'photos/zakopane%20villa%20for%20rent%20kitchen.webp', alt: 'Kitchen overview', altPl: 'Widok kuchni', room: 'kitchen' },
+  { src: 'photos/dom%20na%20wynajem%20zakopane%20sypialnia.webp', alt: 'Double bedroom', altPl: 'Sypialnia z podwójnym łóżkiem', room: 'bedrooms' },
+  { src: 'photos/dom%20na%20wynajem%20zakopane%20sypialnia%202.webp', alt: 'Bedroom — double bed', altPl: 'Sypialnia — podwójne łóżko', room: 'bedrooms' },
+  { src: 'photos/luxury%20villa%20zakopane%20bedroom.webp', alt: 'Bedroom', altPl: 'Sypialnia', room: 'bedrooms' },
+  { src: 'photos/vacation%20home%20zakopane%20villa%20bedroom.webp', alt: 'Villa bedroom', altPl: 'Sypialnia w willi', room: 'bedrooms' },
+  { src: 'photos/vacation%20home%20zakopane%20bed.webp', alt: 'Bedroom', altPl: 'Sypialnia', room: 'bedrooms' },
+  { src: 'photos/villa%20zakopane%20bedroom.webp', alt: 'Bedroom', altPl: 'Sypialnia', room: 'bedrooms' },
+  { src: 'photos/willa%20maciej%C3%B3wka%20zakopane%20sypialnia.webp', alt: 'Bedroom — Willa Maciejówka', altPl: 'Sypialnia — Willa Maciejówka', room: 'bedrooms' },
+  { src: 'photos/zakopane%20villa%20for%20rent%20bedroom.webp', alt: 'Bedroom', altPl: 'Sypialnia', room: 'bedrooms' },
+  { src: 'photos/zakopane%20villa%20for%20rent%20bedroom%202.webp', alt: 'Second bedroom', altPl: 'Druga sypialnia', room: 'bedrooms' },
+  { src: 'photos/zakopane%20villa%20for%20rent%20bedrrom3.webp', alt: 'Third bedroom', altPl: 'Trzecia sypialnia', room: 'bedrooms' },
+  { src: 'photos/luxury%20villa%20zakopane%20bath.webp', alt: 'Bathroom — bathtub', altPl: 'Łazienka — wanna', room: 'bathrooms' },
+  { src: 'photos/luxury%20villa%20zakopane%20bathroom.webp', alt: 'Bathroom', altPl: 'Łazienka', room: 'bathrooms' },
+  { src: 'photos/luxury%20villa%20zakopane%20shower.webp', alt: 'Bathroom — shower', altPl: 'Łazienka — kabina prysznicowa', room: 'bathrooms' },
+  { src: 'photos/villa%20zakopane%20bathroom.webp', alt: 'Bathroom', altPl: 'Łazienka', room: 'bathrooms' },
+  { src: 'photos/villa%20zakopane%20bathroom%202.webp', alt: 'Second bathroom', altPl: 'Druga łazienka', room: 'bathrooms' },
+  { src: 'photos/zakopane%20villa%20for%20rent%20bathroom.webp', alt: 'Bathroom', altPl: 'Łazienka', room: 'bathrooms' },
+  { src: 'photos/willa%20maciej%C3%B3wka%20zakopane%20lazienka.webp', alt: 'Bathroom — Willa Maciejówka', altPl: 'Łazienka — Willa Maciejówka', room: 'bathrooms' },
+  { src: 'photos/willa%20maciej%C3%B3wka%20zakopane%20pralka.webp', alt: 'Laundry room', altPl: 'Pralnia', room: 'laundry' },
 ];
+
+const ROOM_LABELS = {
+  exterior:  { en: 'Exterior & Grounds',     pl: 'Otoczenie i ogród' },
+  hallway:   { en: 'Entrance & Hallway',     pl: 'Wejście i hol' },
+  dining:    { en: 'Conservatory & Dining',  pl: 'Oranżeria i jadalnia' },
+  kitchen:   { en: 'Kitchen',                pl: 'Kuchnia' },
+  bedrooms:  { en: 'Bedrooms',               pl: 'Sypialnie' },
+  bathrooms: { en: 'Bathrooms',              pl: 'Łazienki' },
+  laundry:   { en: 'Laundry',                pl: 'Pralnia' },
+};
+
+const pageLang = document.documentElement.lang === 'pl' ? 'pl' : 'en';
+const photoAlt = p => pageLang === 'pl' ? p.altPl : p.alt;
+
+function plPhotoCountWord(n) {
+  const lastTwo = n % 100;
+  const last = n % 10;
+  if (lastTwo >= 11 && lastTwo <= 14) return 'zdjęć';
+  if (last === 1) return 'zdjęcie';
+  if (last >= 2 && last <= 4) return 'zdjęcia';
+  return 'zdjęć';
+}
 
 // optimized variants: small grid thumbnails vs. larger single-photo viewer images
 const thumbSrc = src => src.replace('photos/', 'photos/thumb/');
@@ -252,7 +274,9 @@ function buildOverlay() {
   if (overlayBuilt) return;
   overlayBuilt = true;
 
-  lbOverlayCount.textContent = PHOTOS.length + ' Photographs';
+  lbOverlayCount.textContent = pageLang === 'pl'
+    ? PHOTOS.length + ' ' + plPhotoCountWord(PHOTOS.length)
+    : PHOTOS.length + ' Photographs';
 
   let currentRoom = null;
   let grid = null;
@@ -261,7 +285,7 @@ function buildOverlay() {
       currentRoom = p.room;
       const heading = document.createElement('h3');
       heading.className = 'lb-room-title';
-      heading.textContent = currentRoom;
+      heading.textContent = ROOM_LABELS[currentRoom][pageLang];
       lbOverlayBody.appendChild(heading);
       grid = document.createElement('div');
       grid.className = 'lb-overlay-grid';
@@ -269,7 +293,7 @@ function buildOverlay() {
     }
     const img = document.createElement('img');
     img.src = thumbSrc(p.src);
-    img.alt = p.alt;
+    img.alt = photoAlt(p);
     img.loading = 'lazy';
     img.decoding = 'async';
     img.addEventListener('click', () => openViewer(i, true));
@@ -301,7 +325,7 @@ function openViewer(idx, fromOverlay) {
   if (overlayWasOpen) lbOverlay.classList.remove('open');
   lbCurrentIdx = idx;
   lbViewerImg.src = fullSrc(PHOTOS[idx].src);
-  lbViewerImg.alt = PHOTOS[idx].alt;
+  lbViewerImg.alt = photoAlt(PHOTOS[idx]);
   lbViewerCounter.textContent = (idx + 1) + ' / ' + PHOTOS.length;
   lbViewer.classList.add('open');
   document.body.classList.add('lb-open');
@@ -321,7 +345,7 @@ function closeViewer() {
 function lbNavigate(dir) {
   lbCurrentIdx = (lbCurrentIdx + dir + PHOTOS.length) % PHOTOS.length;
   lbViewerImg.src = fullSrc(PHOTOS[lbCurrentIdx].src);
-  lbViewerImg.alt = PHOTOS[lbCurrentIdx].alt;
+  lbViewerImg.alt = photoAlt(PHOTOS[lbCurrentIdx]);
   lbViewerCounter.textContent = (lbCurrentIdx + 1) + ' / ' + PHOTOS.length;
   preloadNeighbors(lbCurrentIdx);
 }
