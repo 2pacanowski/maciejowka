@@ -302,7 +302,7 @@ function buildOverlay() {
     img.alt = photoAlt(p);
     img.loading = 'lazy';
     img.decoding = 'async';
-    img.addEventListener('click', () => openViewer(i, true));
+    makeActivatable(img, () => openViewer(i, true), photoAlt(p));
     grid.appendChild(img);
   });
 }
@@ -316,6 +316,16 @@ function openOverlay() {
 function closeOverlay() {
   lbOverlay.classList.remove('open');
   document.body.classList.remove('lb-open');
+}
+
+function makeActivatable(el, handler, label) {
+  el.tabIndex = 0;
+  el.setAttribute('role', 'button');
+  if (label) el.setAttribute('aria-label', label);
+  el.addEventListener('click', handler);
+  el.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handler(); }
+  });
 }
 
 // warm the browser cache for the next/previous photo so arrow nav feels instant
@@ -374,5 +384,7 @@ document.addEventListener('keydown', e => {
 
 // Featured grid clicks open viewer directly
 document.querySelectorAll('.gallery-grid .g').forEach((cell, i) => {
-  cell.addEventListener('click', () => openViewer(FEATURED_INDICES[i], false));
+  const img = cell.querySelector('img');
+  makeActivatable(cell, () => openViewer(FEATURED_INDICES[i], false), img ? img.alt : null);
+  if (img) img.setAttribute('aria-hidden', 'true');
 });
