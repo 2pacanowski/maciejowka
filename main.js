@@ -1,7 +1,13 @@
 // ——— NAV SCROLL ———
 const nav = document.querySelector('.nav');
+let navScrollTicking = false;
 function updateNav() {
-  nav.classList.toggle('scrolled', window.scrollY > 40);
+  if (navScrollTicking) return;
+  navScrollTicking = true;
+  requestAnimationFrame(() => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+    navScrollTicking = false;
+  });
 }
 window.addEventListener('scroll', updateNav, { passive: true });
 updateNav();
